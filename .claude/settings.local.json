@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(yarn install)",
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(corepack enable)",
+      "Bash(yarn start)",
+      "Bash(lsof:*)",
+      "Bash(PORT=3001 yarn start)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
