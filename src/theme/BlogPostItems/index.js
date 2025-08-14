@@ -65,11 +65,7 @@ export default function BlogPostItems({ items, component: BlogPostItemComponent 
                     ))}
                   </div>
                   <div className='text-sm dark:text-gray-400'>
-                    <span>
-                      <TimeStamp timestamp={blog.content.metadata.date} />
-                    </span>
-                    <span className='mx-2'>•</span>
-                    <span>{Math.ceil(blog.content.metadata.readingTime)} min read</span>
+                    <span>2025-06-03</span>
                   </div>
                 </div>
               </div>
