@@ -33,7 +33,7 @@ function BlogHomepageBanner(props) {
     urlBannerBg:
       'https://res.cloudinary.com/thanhnam/image/upload/v1696174608/thanhnamnguyen.dev/blog/blog-banner_othakp.png',
     urlAvatar:
-      'https://res.cloudinary.com/thanhnam/image/upload/v1715137157/project/docusaurus-material-ui-template/logo_wnw5lv.png'
+      'https://avatars.githubusercontent.com/u/143983494?v=4'
   }
 
   return (
