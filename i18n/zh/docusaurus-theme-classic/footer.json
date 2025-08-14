@@ -36,7 +36,7 @@
     "description": "The label of footer link with label=GitHub linking to https://github.com/facebook/docusaurus"
   },
   "copyright": {
-    "message": "版权所有 © 2025 Docusaurus Tailwind Shadcn. 模板作者 <a href=\"https://github.com/namnguyenthanhwork\" style=\"font-weight: bold;\" target=\"_blank\">Thành Nam Nguyễn</a>",
+    "message": "版权所有 © 2025 Docusaurus Tailwind Shadcn. 模板作者 <a href=\"https://github.com/namnguyenthanhwork\" style=\"font-weight: bold;\" target=\"_blank\">YingDong Liu</a>",
     "description": "The footer copyright"
   }
 }

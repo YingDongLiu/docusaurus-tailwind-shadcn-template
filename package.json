@@ -1,7 +1,7 @@
 {
   "name": "docusaurus-tailwind-shadcn-template",
   "description": "Integrating Tailwind CSS and Shadcn/ui with Docusaurus website template",
-  "author": "Thành Nam Nguyễn",
+  "author": "YingDong Liu",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template.git"
