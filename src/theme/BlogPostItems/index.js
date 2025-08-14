@@ -26,36 +26,31 @@ export default function BlogPostItems({ items, component: BlogPostItemComponent 
                 alt={blog.content.metadata.title}
                 loading='lazy'
               />
-              {/* 前景图片 - 三张截图并排 */}
-              <div className='absolute inset-0 flex items-center justify-center gap-2 p-3'>
-                <Image
-                  className='h-auto max-h-[85%] w-auto max-w-[28%] drop-shadow-2xl'
-                  img={useBaseUrl('/img/destinotify/ios/screenshot-1.png')}
-                  alt='DestiNotify App Screenshot 1'
-                  loading='lazy'
-                />
-                <Image
-                  className='h-auto max-h-[85%] w-auto max-w-[28%] drop-shadow-2xl'
-                  img={useBaseUrl('/img/destinotify/ios/screenshot-2.png')}
-                  alt='DestiNotify App Screenshot 2'
-                  loading='lazy'
-                />
-                <Image
-                  className='h-auto max-h-[85%] w-auto max-w-[28%] drop-shadow-2xl'
-                  img={useBaseUrl('/img/destinotify/ios/screenshot-3.png')}
-                  alt='DestiNotify App Screenshot 3'
-                  loading='lazy'
-                />
-              </div>
+              {/* 前景图片 - 截图展示 */}
+              {blog.content.metadata.frontMatter.app?.screenshots && (
+                <div className='absolute inset-0 flex items-center justify-center gap-2 p-3'>
+                  {blog.content.metadata.frontMatter.app.screenshots.map((screenshot, index) => (
+                    <Image
+                      key={screenshot}
+                      className='h-auto max-h-[85%] w-auto max-w-[28%] drop-shadow-2xl'
+                      img={useBaseUrl(screenshot)}
+                      alt={`${blog.content.metadata.title} Screenshot ${index + 1}`}
+                      loading='lazy'
+                    />
+                  ))}
+                </div>
+              )}
               {/* App Store 标识 - 右下角 */}
-              <div className='absolute bottom-1 right-3'>
-                <Image
-                  className='h-10 w-auto opacity-90 drop-shadow-lg'
-                  img={useBaseUrl('/img/apple-appstore.png')}
-                  alt='Available on App Store'
-                  loading='lazy'
-                />
-              </div>
+              {blog.content.metadata.frontMatter.app?.appStoreIcon && (
+                <div className='absolute bottom-1 right-3'>
+                  <Image
+                    className='h-10 w-auto opacity-90 drop-shadow-lg'
+                    img={useBaseUrl(blog.content.metadata.frontMatter.app.appStoreIcon)}
+                    alt='Available on App Store'
+                    loading='lazy'
+                  />
+                </div>
+              )}
             </Link>
 
             <CardContent className='mt-2 p-4'>
