@@ -88,10 +88,14 @@ const config = {
             position: 'right',
           },
           {
-            'href': 'https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template',
+            'href': 'https://www.apple.com/legal/internet-services/itunes/us/terms.html',
             'position': 'right',
-            'className': 'header-github-link',
-            'aria-label': 'GitHub repository'
+            'label': 'Terms'
+          },
+          {
+            'to': '/privacy-policy',
+            'position': 'right',
+            'label': 'Privacy Policy'
           }
         ]
       },

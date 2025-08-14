@@ -18,5 +18,13 @@
   "item.label.Petstore API": {
     "message": "Petstore API",
     "description": "Navbar item with label Petstore API"
+  },
+  "item.label.Terms": {
+    "message": "条款",
+    "description": "Navbar item with label Terms"
+  },
+  "item.label.Privacy Policy": {
+    "message": "隐私政策",
+    "description": "Navbar item with label Privacy Policy"
   }
 }
