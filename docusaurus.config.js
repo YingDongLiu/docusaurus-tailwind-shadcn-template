@@ -64,12 +64,9 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template/tree/main',
-          docItemComponent: '@theme/ApiItem' // Derived from docusaurus-theme-openapi
+          path: 'docs',
+          routeBasePath: 'docs',
+          sidebarPath: false
         },
         blog: false,
         theme: { customCss: './src/css/custom.css' }
@@ -86,8 +83,6 @@ const config = {
         title: 'Docusaurus Tailwind Shadcn/ui',
         logo: { alt: 'Docusaurus Tailwind Shadcn/ui Logo', src: 'img/logo.svg' },
         items: [
-          { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Tutorial' },
-          { label: 'Petstore API', position: 'left', to: '/docs/category/petstore-versioned-api' },
           {
             type: 'localeDropdown',
             position: 'right',
@@ -104,7 +99,6 @@ const config = {
       footer: {
         style: 'dark',
         links: [
-          { title: 'Docs', items: [{ label: 'Tutorial', to: '/docs/intro' }] },
           {
             title: 'Community',
             items: [
@@ -126,39 +120,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} Docusaurus Tailwind Shadcn. Templates by <a href="https://github.com/namnguyenthanhwork" style="font-weight: bold;" target="_blank">Thành Nam Nguyễn</a>`
       },
       prism: {
-        additionalLanguages: [
-          'ruby',
-          'csharp',
-          'php',
-          'java',
-          'powershell',
-          'json',
-          'bash',
-          'dart',
-          'objectivec',
-          'r'
-        ]
-      },
-      languageTabs: [
-        { highlight: 'python', language: 'python', logoClass: 'python' },
-        { highlight: 'bash', language: 'curl', logoClass: 'curl' },
-        { highlight: 'csharp', language: 'csharp', logoClass: 'csharp' },
-        { highlight: 'go', language: 'go', logoClass: 'go' },
-        { highlight: 'javascript', language: 'nodejs', logoClass: 'nodejs' },
-        { highlight: 'ruby', language: 'ruby', logoClass: 'ruby' },
-        { highlight: 'php', language: 'php', logoClass: 'php' },
-        { highlight: 'java', language: 'java', logoClass: 'java', variant: 'unirest' },
-        { highlight: 'powershell', language: 'powershell', logoClass: 'powershell' },
-        { highlight: 'dart', language: 'dart', logoClass: 'dart' },
-        { highlight: 'javascript', language: 'javascript', logoClass: 'javascript' },
-        { highlight: 'c', language: 'c', logoClass: 'c' },
-        { highlight: 'objective-c', language: 'objective-c', logoClass: 'objective-c' },
-        { highlight: 'ocaml', language: 'ocaml', logoClass: 'ocaml' },
-        { highlight: 'r', language: 'r', logoClass: 'r' },
-        { highlight: 'swift', language: 'swift', logoClass: 'swift' },
-        { highlight: 'kotlin', language: 'kotlin', logoClass: 'kotlin' },
-        { highlight: 'rust', language: 'rust', logoClass: 'rust' }
-      ]
+        additionalLanguages: ['bash', 'json']
+      }
     }),
 
   themes: [
@@ -166,62 +129,21 @@ const config = {
       require.resolve('@easyops-cn/docusaurus-search-local'),
       {
         indexPages: true,
-        docsRouteBasePath: '/docs',
+        indexBlog: true,
+        indexDocs: false,
         hashed: true,
         language: ['en', 'zh', 'ja'],
         highlightSearchTermsOnTargetPage: false,
         searchResultContextMaxLength: 50,
         searchResultLimits: 8,
         searchBarShortcut: true,
-        searchBarShortcutHint: true
+        searchBarShortcutHint: true,
+        blogRouteBasePath: '/'
       }
-    ],
-    'docusaurus-theme-openapi-docs'
+    ]
   ],
   plugins: [
     ['./src/plugins/tailwind-config.js', {}],
-    [
-      'docusaurus-plugin-openapi-docs',
-      {
-        id: 'openapi',
-        docsPluginId: 'classic',
-        config: {
-          // multiVersion
-          petstore_versioned: {
-            specPath: 'api-swagger/petstore.yaml',
-            outputDir: 'docs/petstore_versioned', // No trailing slash
-            sidebarOptions: {
-              groupPathsBy: 'tag',
-              categoryLinkSource: 'tag'
-            },
-            version: '2.0.0', // Current version
-            label: 'v2.0.0', // Current version label
-            baseUrl: '/docs/petstore_versioned/swagger-petstore-yaml', // Leading slash is important
-            downloadUrl:
-              'https://raw.githubusercontent.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template/main/api-swagger/petstore.yaml',
-            versions: {
-              '1.0.0': {
-                specPath: 'api-swagger/petstore-1.0.0.yaml',
-                outputDir: 'docs/petstore_versioned/1.0.0', // No trailing slash
-                label: 'v1.0.0',
-                baseUrl: '/docs/petstore_versioned/1.0.0/swagger-petstore-yaml', // Leading slash is important
-                downloadUrl:
-                  'https://raw.githubusercontent.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template/main/api-swagger/petstore-1.0.0.yaml'
-              }
-            }
-          }
-          // singleVersion
-          // petstore: {
-          //   specPath: 'api-swagger/petstore.yaml',
-          //   outputDir: 'docs/petstore',
-          //   sidebarOptions: { groupPathsBy: 'tag', categoryLinkSource: 'tag' },
-          //   downloadUrl: '/petstore.yaml',
-          //   hideSendButton: false,
-          //   showSchemas: true
-          // }
-        }
-      }
-    ],
     [
       'ideal-image',
       /** @type {import('@docusaurus/plugin-ideal-image').PluginOptions} */
