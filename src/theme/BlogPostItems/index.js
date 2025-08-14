@@ -47,6 +47,15 @@ export default function BlogPostItems({ items, component: BlogPostItemComponent 
                   loading='lazy'
                 />
               </div>
+              {/* App Store 标识 - 右下角 */}
+              <div className='absolute bottom-1 right-3'>
+                <Image
+                  className='h-10 w-auto opacity-90 drop-shadow-lg'
+                  img={useBaseUrl('/img/apple-appstore.png')}
+                  alt='Available on App Store'
+                  loading='lazy'
+                />
+              </div>
             </Link>
 
             <CardContent className='mt-2 p-4'>
