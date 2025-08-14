@@ -26,10 +26,34 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
-  i18n: { defaultLocale: 'en', locales: ['en'] },
+  // Internationalization configuration
+  i18n: { 
+    defaultLocale: 'en', 
+    locales: ['en', 'zh', 'ja'],
+    localeConfigs: {
+      en: {
+        label: 'English',
+        direction: 'ltr',
+        htmlLang: 'en-US',
+        calendar: 'gregory',
+        path: 'en',
+      },
+      zh: {
+        label: '简体中文',
+        direction: 'ltr',
+        htmlLang: 'zh-CN',
+        calendar: 'gregory',
+        path: 'zh',
+      },
+      ja: {
+        label: '日本語',
+        direction: 'ltr',
+        htmlLang: 'ja-JP',
+        calendar: 'gregory',
+        path: 'ja',
+      },
+    },
+  },
 
   // Enable Docusaurs Faster: https://github.com/facebook/docusaurus/issues/10556
   future: { experimental_faster: true },
@@ -65,6 +89,10 @@ const config = {
           { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Tutorial' },
           { to: '/blog', label: 'Blog', position: 'left' },
           { label: 'Petstore API', position: 'left', to: '/docs/category/petstore-versioned-api' },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
           {
             'href': 'https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template',
             'position': 'right',
@@ -142,7 +170,7 @@ const config = {
         indexPages: true,
         docsRouteBasePath: '/docs',
         hashed: true,
-        language: ['en'],
+        language: ['en', 'zh', 'ja'],
         highlightSearchTermsOnTargetPage: false,
         searchResultContextMaxLength: 50,
         searchResultLimits: 8,

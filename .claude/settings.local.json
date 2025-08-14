@@ -7,7 +7,10 @@
       "Bash(corepack enable)",
       "Bash(yarn start)",
       "Bash(lsof:*)",
-      "Bash(PORT=3001 yarn start)"
+      "Bash(PORT=3001 yarn start)",
+      "Bash(yarn write-translations:*)",
+      "Bash(mkdir:*)",
+      "Bash(PORT=3001 yarn start --locale ja)"
     ],
     "deny": [],
     "ask": []

@@ -11,6 +11,7 @@
 - 📝 OpenAPI 文档生成
 - 📱 响应式设计
 - 🌗 深色/浅色主题
+- 🌐 国际化支持（中文/日文/英文）
 
 ## 快速开始
 
@@ -38,28 +39,67 @@ yarn build
 yarn serve
 ```
 
+### 国际化开发
 
-## Project Structure
+项目支持中文、日文和英文三种语言。
+
+**本地开发不同语言版本：**
+
+```bash
+# 启动默认语言（英文）
+yarn start
+
+# 启动中文版本
+yarn start --locale zh
+
+# 启动日文版本  
+yarn start --locale ja
+```
+
+**访问不同语言版本：**
+- 英文：http://localhost:3000/
+- 中文：http://localhost:3000/zh/
+- 日文：http://localhost:3000/ja/
+
+**构建多语言版本：**
+
+```bash
+# 构建所有语言版本
+yarn build
+
+# 构建特定语言版本
+yarn build --locale zh
+yarn build --locale ja
+```
+
+**翻译文件位置：**
+- 中文：`i18n/zh/`
+- 日文：`i18n/ja/`
+
+
+## 项目结构
 
 ```bash
 docusaurus-tailwind-shadcn-template/
-├── api-swagger/         # API Swagger files - generate API Docs (if using @PaloAltoNetworks/docusaurus-openapi-docs)
-├── blog/
-├── docs/
+├── api-swagger/         # API Swagger 文件 - 生成 API 文档
+├── blog/                # 博客文章
+├── docs/                # 文档内容
+├── i18n/                # 国际化翻译文件
+│   ├── zh/              # 中文翻译
+│   └── ja/              # 日文翻译
 ├── src/
 │   ├── components/
-│   │   └── ui/           # Shadcn/UI components
+│   │   └── ui/          # Shadcn/UI 组件
 │   ├── css/
-│   │   └── custom.css    # TailwindCSS config and custom styles
+│   │   └── custom.css   # TailwindCSS 配置和自定义样式
 │   ├── lib/
-│   │   └── utils.ts      # Utility functions
-│   ├── pages/            # React pages
-│   ├── plugins/          # Docusaurus plugins
-│   └── theme/            # Docusaurus theme customization
-├── static/               # Static assets
-├── tailwind.config.js    # TailwindCSS configuration (if using v3, removed in v4)
-├── postcss.config.js     # PostCSS configuration
-└── docusaurus.config.js  # Docusaurus configuration
+│   │   └── utils.ts     # 工具函数
+│   ├── pages/           # React 页面
+│   ├── plugins/         # Docusaurus 插件
+│   └── theme/           # Docusaurus 主题自定义
+├── static/              # 静态资源
+├── postcss.config.js    # PostCSS 配置
+└── docusaurus.config.js # Docusaurus 配置
 ```
 
 ## 配置
@@ -84,6 +124,34 @@ function MyComponent() {
 }
 ```
 
+
+### 国际化配置
+
+项目使用 Docusaurus 内置的 i18n 功能，支持三种语言：
+
+- **英文 (en)**: 默认语言
+- **中文 (zh)**: 简体中文
+- **日文 (ja)**: 日本語
+
+**添加新的翻译内容：**
+
+1. 在组件中使用 `Translate` 组件：
+```jsx
+import Translate from '@docusaurus/Translate';
+
+<Translate id="myTranslationId">Default text</Translate>
+```
+
+2. 在翻译文件中添加对应翻译：
+```json
+// i18n/zh/code.json 或 i18n/ja/code.json
+{
+  "myTranslationId": {
+    "message": "翻译后的文本",
+    "description": "翻译描述"
+  }
+}
+```
 
 ### OpenAPI 文档生成
 

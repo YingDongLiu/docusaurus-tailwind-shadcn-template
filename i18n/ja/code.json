@@ -1,0 +1,58 @@
+{
+  "homepage.tagline": {
+    "message": "TailwindCSS と Shadcn/UI を使用した Docusaurus テンプレート",
+    "description": "Homepage tagline"
+  },
+  "homepage.readmeText": {
+    "message": "プロジェクトの詳細については README.md をお読みください",
+    "description": "Homepage readme link text"
+  },
+  "homepage.tutorialButton": {
+    "message": "Docusaurus チュートリアル - 5分 ⏱️",
+    "description": "Homepage tutorial button text"
+  },
+  "homepage.title": {
+    "message": "{siteTitle}へようこそ",
+    "description": "Homepage title"
+  },
+  "homepage.description": {
+    "message": "TailwindCSS と Shadcn/UI を統合したモダンなドキュメントサイトテンプレート",
+    "description": "Homepage description"
+  },
+  "homepage.features.title": {
+    "message": "主な機能",
+    "description": "Features section title"
+  },
+  "homepage.features.easy.title": {
+    "message": "使いやすい",
+    "description": "Easy to use feature title"
+  },
+  "homepage.features.easy.description": {
+    "message": "Docusaurus は最初から簡単にインストールして使用できるように設計されており、ウェブサイトを素早く構築できます。",
+    "description": "Easy to use feature description"
+  },
+  "homepage.features.focus.title": {
+    "message": "重要なことに集中",
+    "description": "Focus feature title"
+  },
+  "homepage.features.focus.description": {
+    "message": "Docusaurus はドキュメントに集中させてくれます。私たちが細かいことを処理します。ドキュメントを docs ディレクトリに移動してください。",
+    "description": "Focus feature description"
+  },
+  "homepage.features.react.title": {
+    "message": "React で動作",
+    "description": "React powered feature title"
+  },
+  "homepage.features.react.description": {
+    "message": "React を再利用してウェブサイトのレイアウトを拡張またはカスタマイズできます。Docusaurus は同じヘッダーとフッターを再利用しながら拡張できます。",
+    "description": "React powered feature description"
+  },
+  "homepage.blog.title": {
+    "message": "最新のブログ",
+    "description": "Blog section title"
+  },
+  "homepage.blog.viewAll": {
+    "message": "すべてのブログを見る",
+    "description": "View all blog posts button"
+  }
+}

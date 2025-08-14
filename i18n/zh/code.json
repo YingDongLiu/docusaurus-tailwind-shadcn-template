@@ -1,0 +1,58 @@
+{
+  "homepage.tagline": {
+    "message": "使用 TailwindCSS 和 Shadcn/UI 的 Docusaurus 模板",
+    "description": "Homepage tagline"
+  },
+  "homepage.readmeText": {
+    "message": "请阅读 README.md 了解更多项目信息",
+    "description": "Homepage readme link text"
+  },
+  "homepage.tutorialButton": {
+    "message": "Docusaurus 教程 - 5分钟 ⏱️",
+    "description": "Homepage tutorial button text"
+  },
+  "homepage.title": {
+    "message": "欢迎来到 {siteTitle}",
+    "description": "Homepage title"
+  },
+  "homepage.description": {
+    "message": "一个集成了 TailwindCSS 和 Shadcn/UI 的现代化文档网站模板",
+    "description": "Homepage description"
+  },
+  "homepage.features.title": {
+    "message": "主要特性",
+    "description": "Features section title"
+  },
+  "homepage.features.easy.title": {
+    "message": "易于使用",
+    "description": "Easy to use feature title"
+  },
+  "homepage.features.easy.description": {
+    "message": "Docusaurus 从一开始就设计成易于安装和使用，让您可以快速构建您的网站。",
+    "description": "Easy to use feature description"
+  },
+  "homepage.features.focus.title": {
+    "message": "专注于重要内容",
+    "description": "Focus feature title"
+  },
+  "homepage.features.focus.description": {
+    "message": "Docusaurus 让您专注于您的文档，我们会处理其他事务。将您的文档移到 docs 目录中。",
+    "description": "Focus feature description"
+  },
+  "homepage.features.react.title": {
+    "message": "由 React 驱动",
+    "description": "React powered feature title"
+  },
+  "homepage.features.react.description": {
+    "message": "通过重用 React 扩展或自定义您的网站布局。Docusaurus 可以在重用相同的页眉和页脚的同时进行扩展。",
+    "description": "React powered feature description"
+  },
+  "homepage.blog.title": {
+    "message": "最新博客",
+    "description": "Blog section title"
+  },
+  "homepage.blog.viewAll": {
+    "message": "查看所有博客",
+    "description": "View all blog posts button"
+  }
+}

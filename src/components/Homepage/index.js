@@ -2,6 +2,7 @@ import Layout from '@theme/Layout'
 import Heading from '@theme/Heading'
 import Link from '@docusaurus/Link'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
+import Translate, { translate } from '@docusaurus/Translate'
 
 import HomepageFeatures from './Features'
 import LatestNews from '../LatestNews'
@@ -26,18 +27,26 @@ function HomepageHeader() {
         </Heading>
 
         <p className='mb-4 text-lg md:text-xl lg:text-2xl'>
-          <span className='mb-1 block'>{siteConfig.tagline}</span>
+          <span className='mb-1 block'>
+            <Translate id="homepage.tagline">
+              {siteConfig.tagline}
+            </Translate>
+          </span>
           <Link
             href='https://github.com/namnguyenthanhwork/docusaurus-tailwind-shadcn-template'
             className='text-blue-700 dark:text-green-700'
           >
-            Please read README.md for more about project information
+            <Translate id="homepage.readmeText">
+              Please read README.md for more about project information
+            </Translate>
           </Link>
         </p>
 
         <Button asChild>
           <Link to='/docs/intro' className='hover:text-primary-foreground'>
-            Docusaurus Tutorial - 5min ⏱️
+            <Translate id="homepage.tutorialButton">
+              Docusaurus Tutorial - 5min ⏱️
+            </Translate>
           </Link>
         </Button>
       </div>
@@ -50,8 +59,16 @@ export default function Home({ homePageBlogMetadata, recentPosts }) {
 
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description='Description will go into a meta tag in <head />'
+      title={translate({
+        id: 'homepage.title',
+        message: `Hello from ${siteConfig.title}`,
+        description: 'Homepage title'
+      })}
+      description={translate({
+        id: 'homepage.description',
+        message: 'A modern documentation website template with TailwindCSS and Shadcn/UI',
+        description: 'Homepage description'
+      })}
     >
       <HomepageHeader />
       <main>
