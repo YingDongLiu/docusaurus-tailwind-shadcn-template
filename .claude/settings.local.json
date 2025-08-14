@@ -11,7 +11,8 @@
       "Bash(yarn write-translations:*)",
       "Bash(mkdir:*)",
       "Bash(PORT=3001 yarn start --locale ja)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(yarn clear)"
     ],
     "deny": [],
     "ask": []
