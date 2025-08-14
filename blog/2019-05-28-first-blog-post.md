@@ -2,7 +2,7 @@
 slug: first-blog-post
 title: First Blog Post
 image: https://res.cloudinary.com/thanhnam/image/upload/v1736787946/project/docusaurus-tailwind-shadcn-template/blog_vep2ri.jpg
-authors: [gao-wei]
+authors: [yingdongliu]
 tags: [hola, docusaurus]
 ---
 

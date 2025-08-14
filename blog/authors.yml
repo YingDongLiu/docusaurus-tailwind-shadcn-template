@@ -1,22 +1,3 @@
-endi:
-  page: true
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  image_url: https://github.com/endiliey.png
-
-yangshun:
-  page: true
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  image_url: https://github.com/yangshun.png
-
-
-gao-wei:
-  page: true
-  name: Gao Wei
-  title: Docusaurus Core Team
-  image_url: https://github.com/wgao19.png
-
 yingdongliu:
   page: true
   name: YingDong Liu
