@@ -1,10 +1,10 @@
 {
   "title": {
-    "message": "Docusaurus Tailwind Shadcn/ui",
+    "message": "liu-apps",
     "description": "The title in the navbar"
   },
   "logo.alt": {
-    "message": "Docusaurus Tailwind Shadcn/ui ロゴ",
+    "message": "liu-apps ロゴ",
     "description": "The alt text of navbar logo"
   },
   "item.label.Tutorial": {
