@@ -4,11 +4,10 @@ import Image from '@theme/IdealImage'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
 import BlogPostItem from '@theme/BlogPostItem'
-import TagsListInline from '@theme/TagsListInline'
 
 import TimeStamp from '../../components/TimeStamp'
 import { Avatar } from '../../components/ui/avatar'
-import { Card, CardContent, CardFooter } from '../../components/ui/card'
+import { Card, CardContent } from '../../components/ui/card'
 
 export default function BlogPostItems({ items, component: BlogPostItemComponent = BlogPostItem }) {
   return (
@@ -64,13 +63,6 @@ export default function BlogPostItems({ items, component: BlogPostItemComponent 
               </div>
             </CardContent>
 
-            <CardFooter className='px-2'>
-              {blog.content.metadata.tags.length > 0 && (
-                <div className='blog-tags flex flex-wrap gap-2'>
-                  <TagsListInline tags={blog.content.metadata.tags} />
-                </div>
-              )}
-            </CardFooter>
           </Card>
         </div>
       ))}

@@ -9,6 +9,7 @@ import Image from '@theme/IdealImage'
 import useBaseUrl from '@docusaurus/useBaseUrl'
 
 import { BlogPagination } from '../BlogPagination'
+import CustomTagsList from '../../components/CustomTagsList'
 
 function BlogListPageMetadata(props) {
   const { metadata } = props
@@ -29,12 +30,25 @@ function BlogListPageMetadata(props) {
 
 function BlogHomepageBanner(props) {
   const blogMetadata = props.metadata
+  const items = props.items || []
   const imageDefault = {
     urlBannerBg:
       'https://res.cloudinary.com/thanhnam/image/upload/v1696174608/thanhnamnguyen.dev/blog/blog-banner_othakp.png',
     urlAvatar:
       'https://avatars.githubusercontent.com/u/143983494?v=4'
   }
+
+  // 定义技术标签
+  const techTags = [
+    'Java', 'Python', 'Swift', 'SwiftUI', 'JavaScript', 'TypeScript', 'Shell', 'JQuery', 
+    'Angular', 'AngularJS', 'VUE', 'React', 'Flutter', 'Thymeleaf', 'JSP', 'BootStarp', 'SpringMVC', 
+    'SpringBoot', 'SpringSecurity', 'SpringBatch', 'MyBatis', 'MyBatisPlus', 'Salesforce',
+    'MySQL', 'Redis', 'Oracle', 'Git', 'SVN', 'Docker', 'Jenkins', 'Jmeter', 
+    'AWS', 'EC2', 'RDS', 'S3', 'Route53', 'SES'
+  ]
+
+  // 将技术标签转换为标签对象格式
+  const allTags = techTags.map(tech => ({ label: tech }))
 
   return (
     <div className='blog'>
@@ -56,7 +70,14 @@ function BlogHomepageBanner(props) {
       </div>
       <div className='my-20 text-center'>
         <h2 className='mb-2 text-xl font-bold md:text-2xl lg:text-3xl'>{blogMetadata.blogTitle}</h2>
-        <p className=''>{blogMetadata.blogDescription}</p>
+        <p className='mb-4'>{blogMetadata.blogDescription}</p>
+        {allTags.length > 0 && (
+          <div className='flex justify-center'>
+            <div className='flex flex-wrap gap-2'>
+              <CustomTagsList tags={allTags} />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
