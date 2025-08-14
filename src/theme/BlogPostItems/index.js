@@ -35,30 +35,42 @@ export default function BlogPostItems({ items, component: BlogPostItemComponent 
               <p className='mb-4 mt-2 line-clamp-2 dark:text-gray-400'>
                 {blog.content.metadata.description}
               </p>
-              <div className='my-2 flex flex-wrap items-center gap-2'>
-                {blog.content.metadata.authors.map((author, index) => (
-                  <Link
-                    href={author.page.permalink}
-                    title={author.name}
-                    key={index}
-                    className='transition-opacity hover:opacity-80'
-                  >
-                    <Avatar>
-                      <Image
-                        alt={author.name}
-                        img={useBaseUrl(author.imageURL)}
-                        className='aspect-square h-full w-full'
-                      />
-                    </Avatar>
-                  </Link>
-                ))}
+              <div className='my-2 flex items-center gap-3'>
+                <div className='flex items-center gap-2'>
+                  {blog.content.metadata.authors.map((author, index) => (
+                    <Link
+                      href={author.page.permalink}
+                      title={author.name}
+                      key={index}
+                      className='transition-opacity hover:opacity-80'
+                    >
+                      <Avatar>
+                        <Image
+                          alt={author.name}
+                          img={useBaseUrl(author.imageURL)}
+                          className='aspect-square h-full w-full'
+                        />
+                      </Avatar>
+                    </Link>
+                  ))}
+                </div>
 
-                <div className='text-sm dark:text-gray-400'>
-                  <span>
-                    <TimeStamp timestamp={blog.content.metadata.date} />
-                  </span>
-                  <span className='mx-2'>•</span>
-                  <span>{Math.ceil(blog.content.metadata.readingTime)} min read</span>
+                <div className='flex flex-col'>
+                  <div className='text-sm font-medium dark:text-gray-200'>
+                    {blog.content.metadata.authors.map((author, index) => (
+                      <span key={index}>
+                        {author.name}
+                        {index < blog.content.metadata.authors.length - 1 && ', '}
+                      </span>
+                    ))}
+                  </div>
+                  <div className='text-sm dark:text-gray-400'>
+                    <span>
+                      <TimeStamp timestamp={blog.content.metadata.date} />
+                    </span>
+                    <span className='mx-2'>•</span>
+                    <span>{Math.ceil(blog.content.metadata.readingTime)} min read</span>
+                  </div>
                 </div>
               </div>
             </CardContent>
