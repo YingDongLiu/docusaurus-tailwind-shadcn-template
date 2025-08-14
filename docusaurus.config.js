@@ -121,7 +121,7 @@ const config = {
             ]
           }
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Docusaurus Tailwind Shadcn. Templates by <a href="https://github.com/namnguyenthanhwork" style="font-weight: bold;" target="_blank">YingDong Liu</a>`
+        copyright: `Copyright © ${new Date().getFullYear()} All rights reserved | Yingdongliu`
       },
       colorMode: {
         defaultMode: 'dark',
