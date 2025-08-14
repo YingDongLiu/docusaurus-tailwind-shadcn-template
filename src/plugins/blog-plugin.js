@@ -41,29 +41,7 @@ async function blogPluginExtended(...pluginArgs) {
         }
       }
 
-      actions.addRoute({
-        // Add route for the home page
-        path: '/',
-        exact: true,
-
-        // The component to use for the "Home" page route
-        component: '@site/src/components/Homepage/index.js',
-
-        // These are the props that will be passed to our "Home" page component
-        modules: {
-          homePageBlogMetadata: await actions.createData(
-            'home-page-blog-metadata.json',
-            JSON.stringify({
-              blogTitle: pluginOptions.blogTitle,
-              blogDescription: pluginOptions.blogDescription,
-              path: pluginOptions.path,
-              totalPosts: content.blogPosts.length,
-              totalRecentPosts: recentPosts.length
-            })
-          ),
-          recentPosts: await Promise.all(recentPosts.map(createRecentPostModule))
-        }
-      })
+      // Remove custom home page route since blog will be the home page
 
       // Call the default overridden `contentLoaded` implementation
       return blogPluginInstance.contentLoaded(params)

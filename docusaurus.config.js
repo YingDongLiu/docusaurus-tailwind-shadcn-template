@@ -87,7 +87,6 @@ const config = {
         logo: { alt: 'Docusaurus Tailwind Shadcn/ui Logo', src: 'img/logo.svg' },
         items: [
           { type: 'docSidebar', sidebarId: 'tutorialSidebar', position: 'left', label: 'Tutorial' },
-          { to: '/blog', label: 'Blog', position: 'left' },
           { label: 'Petstore API', position: 'left', to: '/docs/category/petstore-versioned-api' },
           {
             type: 'localeDropdown',
@@ -120,7 +119,6 @@ const config = {
           {
             title: 'More',
             items: [
-              { label: 'Blog', to: '/blog' },
               { label: 'GitHub', href: 'https://github.com/facebook/docusaurus' }
             ]
           }
@@ -245,7 +243,7 @@ const config = {
         blogDescription: 'Blog description is here ...',
         blogSidebarCount: 'ALL',
         blogSidebarTitle: 'List blog',
-        routeBasePath: 'blog',
+        routeBasePath: '/',
         include: ['**/*.md', '**/*.mdx'],
         exclude: [
           '**/_*.{js,jsx,ts,tsx,md,mdx}',
