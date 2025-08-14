@@ -6,7 +6,7 @@ export default function CustomTagsList({ tags }) {
   }
 
   return (
-    <div className="flex flex-wrap gap-1">
+    <div className="flex flex-wrap justify-center gap-2">
       {tags.map((tag) => (
         <span
           key={tag.label}

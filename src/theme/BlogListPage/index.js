@@ -38,13 +38,30 @@ function BlogHomepageBanner(props) {
       'https://avatars.githubusercontent.com/u/143983494?v=4'
   }
 
-  // 定义技术标签
+  // 定义技术标签 - 按类型分组排序
   const techTags = [
-    'Java', 'Python', 'Swift', 'SwiftUI', 'JavaScript', 'TypeScript', 'Shell', 'JQuery', 
-    'Angular', 'AngularJS', 'VUE', 'React', 'Flutter', 'Thymeleaf', 'JSP', 'BootStarp', 'SpringMVC', 
-    'SpringBoot', 'SpringSecurity', 'SpringBatch', 'MyBatis', 'MyBatisPlus', 'Salesforce',
-    'MySQL', 'Redis', 'Oracle', 'Git', 'SVN', 'Docker', 'Jenkins', 'Jmeter', 
-    'AWS', 'EC2', 'RDS', 'S3', 'Route53', 'SES'
+    // 编程语言
+    'Java', 'JavaScript', 'TypeScript', 'Python', 'Swift', 'Shell',
+    // 移动/跨平台开发
+    'SwiftUI', 'Flutter',
+    // 前端框架/库
+    'React', 'Vue', 'Angular', 'AngularJS', 'jQuery',
+    // CSS框架
+    'Bootstrap',
+    // 模板引擎
+    'Thymeleaf', 'JSP',
+    // Spring生态系统
+    'SpringMVC', 'SpringBoot', 'SpringSecurity', 'SpringBatch',
+    // 数据库/ORM
+    'MySQL', 'Oracle', 'Redis', 'MyBatis', 'MyBatisPlus',
+    // 版本控制
+    'Git', 'SVN',
+    // DevOps/工具
+    'Docker', 'Jenkins', 'JMeter',
+    // 云平台/服务
+    'AWS', 'EC2', 'RDS', 'S3', 'Route53', 'SES',
+    // 企业平台
+    'Salesforce'
   ]
 
   // 将技术标签转换为标签对象格式
@@ -73,7 +90,7 @@ function BlogHomepageBanner(props) {
         <p className='mb-4'>{blogMetadata.blogDescription}</p>
         {allTags.length > 0 && (
           <div className='flex justify-center'>
-            <div className='flex flex-wrap gap-2'>
+            <div className='max-w-4xl'>
               <CustomTagsList tags={allTags} />
             </div>
           </div>
