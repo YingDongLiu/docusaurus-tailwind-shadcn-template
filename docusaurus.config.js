@@ -166,7 +166,7 @@ const config = {
         path: 'blog',
         editLocalizedFiles: false,
         blogTitle: 'Tiny apps, quiet revolutions.',
-        blogDescription: 'Tiny apps, quiet revolutions.',
+        blogDescription: 'One home for all my apps—downloads, release notes, and behind-the-scenes stories.',
         blogSidebarCount: 'ALL',
         blogSidebarTitle: 'List blog',
         routeBasePath: '/',
