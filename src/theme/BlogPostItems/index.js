@@ -17,14 +17,36 @@ export default function BlogPostItems({ items, component: BlogPostItemComponent 
           <Card className='flex w-full flex-col border-0 bg-transparent shadow-none'>
             <Link
               to={blog.content.metadata.permalink}
-              className='overflow-hidden transition-opacity hover:opacity-90'
+              className='relative overflow-hidden transition-opacity hover:opacity-90'
             >
+              {/* 背景图片 */}
               <Image
                 className='block h-auto w-full rounded-lg object-cover'
                 img={useBaseUrl(blog.content.metadata.frontMatter.image)}
                 alt={blog.content.metadata.title}
                 loading='lazy'
               />
+              {/* 前景图片 - 三张截图并排 */}
+              <div className='absolute inset-0 flex items-center justify-center gap-2 p-3'>
+                <Image
+                  className='h-auto max-h-[85%] w-auto max-w-[28%] drop-shadow-2xl'
+                  img={useBaseUrl('/img/destinotify/ios/screenshot-1.png')}
+                  alt='DestiNotify App Screenshot 1'
+                  loading='lazy'
+                />
+                <Image
+                  className='h-auto max-h-[85%] w-auto max-w-[28%] drop-shadow-2xl'
+                  img={useBaseUrl('/img/destinotify/ios/screenshot-2.png')}
+                  alt='DestiNotify App Screenshot 2'
+                  loading='lazy'
+                />
+                <Image
+                  className='h-auto max-h-[85%] w-auto max-w-[28%] drop-shadow-2xl'
+                  img={useBaseUrl('/img/destinotify/ios/screenshot-3.png')}
+                  alt='DestiNotify App Screenshot 3'
+                  loading='lazy'
+                />
+              </div>
             </Link>
 
             <CardContent className='mt-2 p-4'>
