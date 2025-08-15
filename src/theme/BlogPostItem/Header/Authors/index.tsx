@@ -10,9 +10,15 @@ export default function BlogPostItemHeaderAuthors({
   className,
 }: Props): ReactNode {
   const {
-    metadata: {authors},
+    metadata: {authors, frontMatter},
     assets,
   } = useBlogPost();
+  
+  // Check if authors should be hidden
+  if ((frontMatter as any)?.hide_author) {
+    return null;
+  }
+  
   const authorsCount = authors.length;
   if (authorsCount === 0) {
     return null;
