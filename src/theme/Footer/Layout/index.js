@@ -3,10 +3,10 @@ import React from 'react'
 export default function FooterLayout({ style, links, logo, copyright }) {
   return (
     <footer className='bg-gray-100 dark:bg-slate-950/50'>
-      <div className='mx-auto max-w-7xl px-4 py-10'>
+      <div className='mx-auto max-w-7xl px-4 pt-10'>
         {links}
         {(logo || copyright) && (
-          <div className='footer__bottom text--center'>
+          <div className='footer__bottom text--center pt-6 pb-2'>
             {logo && <div className='margin-bottom--sm'>{logo}</div>}
             {copyright}
           </div>
