@@ -46,7 +46,7 @@ export default function AboutPage({ content, locale = 'en' }) {
                         />
                       </a>
                       <div className="flex flex-col">
-                        <a href={author.url} className="font-medium hover:underline">
+                        <a href={author.url} className="text-lg font-bold hover:no-underline">
                           {author.name}
                         </a>
                         <span className="text-sm text-muted-foreground">
