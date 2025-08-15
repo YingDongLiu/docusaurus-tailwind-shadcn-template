@@ -21,7 +21,9 @@ export default function About() {
       <div className="container margin-vert--lg">
         <div className="row">
           <div className="col col--8 col--offset-2">
-            <article>
+            <div className="row">
+              <div className="col col--8">
+                <article>
               {/* 博客文章样式的头部 */}
               <header>
                 {/* 标题 */}
@@ -106,7 +108,65 @@ export default function About() {
                 
                 <p>📩 <strong>メール:</strong> dn.apps.contact@gmail.com</p>
               </div>
-            </article>
+                </article>
+              </div>
+              
+              {/* 右侧图片展示区域 */}
+              <div className="col col--4">
+            <div className="margin-top--xl">
+              <div style={{display: 'flex', flexDirection: 'column', gap: '30px'}}>
+                <div>
+                  <img 
+                    src="https://picsum.photos/300/200?random=1" 
+                    alt="ワークスペース" 
+                    style={{
+                      width: '100%', 
+                      height: '200px', 
+                      objectFit: 'cover', 
+                      borderRadius: '8px',
+                      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                    }} 
+                  />
+                  <p style={{marginTop: '8px', fontSize: '14px', color: 'var(--ifm-color-secondary)', textAlign: 'center'}}>
+                    🚀 革新的なソリューションを構築
+                  </p>
+                </div>
+                <div>
+                  <img 
+                    src="https://picsum.photos/300/200?random=2" 
+                    alt="コーディング" 
+                    style={{
+                      width: '100%', 
+                      height: '200px', 
+                      objectFit: 'cover', 
+                      borderRadius: '8px',
+                      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                    }} 
+                  />
+                  <p style={{marginTop: '8px', fontSize: '14px', color: 'var(--ifm-color-secondary)', textAlign: 'center'}}>
+                    💻 美しいコードへの情熱
+                  </p>
+                </div>
+                <div>
+                  <img 
+                    src="https://picsum.photos/300/200?random=3" 
+                    alt="自然" 
+                    style={{
+                      width: '100%', 
+                      height: '200px', 
+                      objectFit: 'cover', 
+                      borderRadius: '8px',
+                      boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
+                    }} 
+                  />
+                  <p style={{marginTop: '8px', fontSize: '14px', color: 'var(--ifm-color-secondary)', textAlign: 'center'}}>
+                    🌿 自然の中でバランスを見つける
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+            </div>
           </div>
         </div>
       </div>
