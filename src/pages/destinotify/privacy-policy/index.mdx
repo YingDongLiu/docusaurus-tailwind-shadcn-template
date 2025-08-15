@@ -1,0 +1,24 @@
+---
+title: DestiNotify Privacy Policy
+description: Privacy policy for DestiNotify app
+---
+
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import EnContent from './en.md';
+import JaContent from './ja.md';
+import ZhContent from './zh.md';
+
+export function DynamicPrivacyPolicy() {
+  const {i18n} = useDocusaurusContext();
+  const currentLocale = i18n.currentLocale;
+  
+  if (currentLocale === 'ja') {
+    return <JaContent />;
+  } else if (currentLocale === 'zh') {
+    return <ZhContent />;
+  } else {
+    return <EnContent />;
+  }
+}
+
+<DynamicPrivacyPolicy />

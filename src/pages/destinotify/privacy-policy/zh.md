@@ -1,0 +1,39 @@
+# 隐私政策
+2023年9月3日
+
+## 1. 介绍
+本文件是关于Liu YingDong（以下简称"我们"）提供的智能手机应用程序（以下称为"本应用程序"）中用户信息处理的规定。有关我们的联系方式，请参阅第7条。
+
+## 2. 信息收集
+在使用本应用程序时，我们可能会收集以下用户信息。
+
+### 2.1 收集应用程序使用情况
+我们提供的应用程序可能会使用Google AdMob进行广告投放，使用Google Firebase Analytics和Google Analytics进行使用情况分析。有关收集的信息、用途以及提供给第三方等详细信息，请参阅以下隐私政策链接。
+
+[Google AdMob（Google Inc.）](http://www.google.com/intl/ja/policies/technologies/ads/)
+
+[Google Firebase Analytics，Google Analytics（Google Inc.）](https://policies.google.com/privacy?hl=ja)
+
+[Crashlytics（Google Inc.）](https://fabric.io/terms)
+
+### 2.2 收集个人信息以进行查询和意见反馈
+* 2.2.1 发件人的电子邮件地址，用于识别设备的信息（用户支持ID）
+* 2.2.2 查询内容
+
+## 3. 用途
+我们将在2.2中收集的信息用于回复查询。此外，我们还将使用2.2中收集的信息来提高本应用程序的质量。
+
+## 4. 个人信息管理
+我们将确保客户的个人信息准确且及时，并采取安全措施以防止未经授权访问、丢失、损坏、篡改、泄露等个人信息的风险，并严格管理个人信息。
+
+## 5. 禁止向第三方披露或提供个人信息
+除非以下情况之一，否则我们不会向第三方披露客户提供的个人信息：
+* 获得客户同意的情况下
+* 根据法律规定需要披露的情况
+
+## 6. 遵守法律法规和定期审查
+我们将遵守适用于持有的个人信息的日本法律法规和其他规范，定期审查本政策内容并努力改进。
+
+## 7. 联系方式
+* Liu YingDong
+* dn.apps.contact@gmail.com
