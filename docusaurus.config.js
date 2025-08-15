@@ -88,9 +88,9 @@ const config = {
             position: 'right',
           },
           {
-            'href': 'https://www.apple.com/legal/internet-services/itunes/us/terms.html',
+            'to': '/about',
             'position': 'right',
-            'label': 'Terms'
+            'label': 'About'
           },
           {
             'to': '/privacy-policy',
