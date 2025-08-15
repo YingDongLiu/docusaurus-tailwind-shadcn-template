@@ -27,89 +27,81 @@ export default function AboutPage({ content, locale = 'en' }) {
                 <article>
                   {/* Header */}
                   <header>
-                    <h1 className="margin-bottom--md">{content.title}</h1>
+                    <h1 className="text-3xl font-bold mb-4">{content.title}</h1>
                     
-                    <div className="margin-bottom--md">
-                      <time dateTime="2024-01-15" className="text--secondary">
+                    <div className="mb-4 text-muted-foreground">
+                      <time dateTime="2024-01-15">
                         {content.date}
                       </time>
-                      <span className="text--secondary"> · {content.readTime}</span>
+                      <span> · {content.readTime}</span>
                     </div>
 
                     {/* Author info */}
-                    <div className="margin-top--md margin-bottom--sm">
-                      <div className="row">
-                        <div className="col col--12">
-                          <div className="avatar margin-bottom--sm">
-                            <a href={author.url} className="avatar__photo-link">
-                              <img
-                                className="avatar__photo"
-                                src={author.imageURL}
-                                alt={author.name}
-                              />
-                            </a>
-                            <div className="avatar__intro">
-                              <div className="avatar__name">
-                                <a href={author.url}>
-                                  <span>{author.name}</span>
-                                </a>
-                              </div>
-                              <small className="text--secondary" title={author.title}>
-                                {author.title}
-                              </small>
-                            </div>
-                          </div>
-                        </div>
+                    <div className="flex items-center gap-3 mt-4 mb-6">
+                      <a href={author.url} className="block">
+                        <img
+                          className="w-12 h-12 rounded-full object-cover"
+                          src={author.imageURL}
+                          alt={author.name}
+                        />
+                      </a>
+                      <div className="flex flex-col">
+                        <a href={author.url} className="font-medium hover:underline">
+                          {author.name}
+                        </a>
+                        <span className="text-sm text-muted-foreground">
+                          {author.title}
+                        </span>
                       </div>
                     </div>
                   </header>
 
                   {/* Content */}
-                  <div className="markdown">
-                    <p>
+                  <div className="prose prose-slate dark:prose-invert max-w-none">
+                    <p className="text-base leading-7">
                       {content.intro}<br />
                       {content.introDesc}
                     </p>
 
-                    <h2>{content.sections.aboutMe.title}</h2>
-                    <ul>
+                    <h2 className="text-2xl font-semibold mt-8 mb-4">{content.sections.aboutMe.title}</h2>
+                    <ul className="space-y-2">
                       {content.sections.aboutMe.items.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index} className="text-base">{item}</li>
                       ))}
                     </ul>
 
-                    <h2>{content.sections.techStack.title}</h2>
-                    <p>{content.sections.techStack.desc}</p>
-                    <ul>
+                    <h2 className="text-2xl font-semibold mt-8 mb-4">{content.sections.techStack.title}</h2>
+                    <p className="text-base mb-4">{content.sections.techStack.desc}</p>
+                    <ul className="space-y-2">
                       {content.sections.techStack.items.map((item, index) => (
-                        <li key={index}>
-                          <strong>{item.label}</strong>: {item.value}
+                        <li key={index} className="text-base">
+                          <strong className="font-semibold">{item.label}</strong>: {item.value}
                         </li>
                       ))}
                     </ul>
 
-                    <h2>{content.sections.values.title}</h2>
-                    <ul>
+                    <h2 className="text-2xl font-semibold mt-8 mb-4">{content.sections.values.title}</h2>
+                    <ul className="space-y-2">
                       {content.sections.values.items.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index} className="text-base">{item}</li>
                       ))}
                     </ul>
 
-                    <h2>{content.sections.hobbies.title}</h2>
-                    <ul>
+                    <h2 className="text-2xl font-semibold mt-8 mb-4">{content.sections.hobbies.title}</h2>
+                    <ul className="space-y-2">
                       {content.sections.hobbies.items.map((item, index) => (
-                        <li key={index}>{item}</li>
+                        <li key={index} className="text-base">{item}</li>
                       ))}
                     </ul>
 
-                    <h2>{content.sections.message.title}</h2>
-                    <p>
+                    <h2 className="text-2xl font-semibold mt-8 mb-4">{content.sections.message.title}</h2>
+                    <p className="text-base leading-7">
                       {content.sections.message.text}<br />
                       {content.sections.message.cta}
                     </p>
                     
-                    <p>
-                      📩 <strong>{locale === 'en' ? 'Email' : locale === 'zh' ? '邮箱' : 'メール'}:</strong> {content.sections.message.email}
+                    <p className="text-base mt-4">
+                      📩 <strong className="font-semibold">{locale === 'en' ? 'Email' : locale === 'zh' ? '邮箱' : 'メール'}:</strong> {content.sections.message.email}
                     </p>
                   </div>
                 </article>
