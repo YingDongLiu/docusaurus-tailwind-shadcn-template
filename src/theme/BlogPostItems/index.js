@@ -123,11 +123,26 @@ export default function BlogPostItems({ items, component: BlogPostItemComponent 
 
                 {/* App Store Download Badge */}
                 <div className='flex-shrink-0 flex items-center'>
-                  <img
-                    src={useBaseUrl(getDownloadButton())}
-                    alt='Download on the App Store'
-                    className='h-8 w-auto transition-opacity hover:opacity-80 cursor-pointer'
-                  />
+                  {blog.content.metadata.frontMatter.app?.appStoreUrl ? (
+                    <a 
+                      href={blog.content.metadata.frontMatter.app.appStoreUrl}
+                      target='_blank'
+                      rel='noopener noreferrer'
+                      className='flex items-center'
+                    >
+                      <img
+                        src={useBaseUrl(getDownloadButton())}
+                        alt='Download on the App Store'
+                        className='h-8 w-auto transition-opacity hover:opacity-80 cursor-pointer'
+                      />
+                    </a>
+                  ) : (
+                    <img
+                      src={useBaseUrl(getDownloadButton())}
+                      alt='Download on the App Store'
+                      className='h-8 w-auto transition-opacity hover:opacity-80 cursor-pointer'
+                    />
+                  )}
                 </div>
               </div>
             </CardContent>
