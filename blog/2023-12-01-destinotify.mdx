@@ -18,4 +18,80 @@ custom_tagline:
   ja: "到着前に通知、安心して旅を。"
 ---
 
-Blog posts support [Docusaurus Markdown features](https://docusaurus.io/docs/markdown-features), such as [MDX](https://mdxjs.com/).
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+
+export function Screenshots() {
+  const {i18n} = useDocusaurusContext();
+  const currentLocale = i18n.currentLocale;
+  
+  const screenshots = {
+    en: [
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/0f/4f/9e/0f4f9e44-d85c-2ad8-3900-10a37730cd39/4b07d8ec-3356-4ef5-a97f-35f114132c6d_screenshot1.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/ac/a3/6f/aca36fa0-a821-9a75-9f86-eb66f0271167/ace4c1e0-4f3d-4471-8199-ebf79895ef77_screenshot2.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/97/e9/42/97e94295-c0a9-a7b5-6dda-acc0c0964099/707088c9-f4ed-4223-9a56-93bd0437f87f_screenshot3.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/82/bf/9d/82bf9dae-70c2-9567-0066-122bc83f942b/9403db77-b1b9-4d9f-ab83-3539f26a59cc_screenshot4.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/ae/5f/f9/ae5ff9a0-eb79-69aa-5a6e-b41207e81c06/09511454-0ef1-4254-a01b-7213907cafcd_screenshot5.png/0x0ss.png'
+    ],
+    zh: [
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/32/ed/10/32ed10cb-45e8-a40a-ee85-322bdf153dd2/6299aff0-cdb6-47d8-a3a1-69efcae38d09_screenshot1.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/32/2a/d8/322ad893-f868-828c-26b1-3252d82dfc2e/1db75ffc-d3ff-4d40-812a-74810f89ab30_screenshot2.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/82/30/db/8230db14-8ea0-a901-21f5-33e03a9cbd75/20cc1723-32dd-419e-bb63-eb2a3415b917_screenshot3.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/99/e1/ae/99e1ae54-e20a-caf7-cb83-61c7ddfe6e4b/cc80d773-754f-4fcf-90b3-1177c6b6a855_screenshot4.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/d7/ce/37/d7ce37a3-7b50-5b9b-50dc-a048e9e35ff8/4409b1bc-307a-49e2-9207-c3601b5676ff_screenshot5.png/0x0ss.png'
+    ],
+    ja: [
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/99/83/d7/9983d7b9-81d8-78c6-8a69-c848b4a9d830/85de299c-bccd-4fa9-bf08-41f0c684a375_screenshot1.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/1f/6f/4a/1f6f4aa4-24bd-0e2f-753c-427138c669a7/36a13eaa-4e38-400a-a476-3baea90fefe6_screenshot2.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource116/v4/ed/b9/eb/edb9ebab-5ae7-7ee9-443e-31d1725c52d5/75bff60b-e5f3-4b56-b3f7-83b0573caabb_screenshot3.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/f9/7f/df/f97fdf7e-a1a0-f088-be15-310bdf784457/b14884bd-b71f-4465-854f-2aecb16d629d_screenshot4.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource126/v4/88/49/e7/8849e7a6-9ae7-65ef-8164-9af0eb053fbf/bb5ef746-b49d-40cb-9870-0cf5b9fc9f56_screenshot5.png/0x0ss.png'
+    ]
+  };
+  
+  const currentScreenshots = screenshots[currentLocale] || screenshots.en;
+  
+  return (
+    <div className="grid grid-cols-5 gap-4 my-8">
+      {currentScreenshots.map((screenshot, index) => (
+        <img 
+          key={index}
+          src={screenshot} 
+          alt={`DestiNotify Screenshot ${index + 1}`}
+        />
+      ))}
+    </div>
+  );
+}
+
+<Screenshots />
+
+export function AppDescription() {
+  const {i18n} = useDocusaurusContext();
+  const currentLocale = i18n.currentLocale;
+  
+  const descriptions = {
+    en: {
+      title: "What is DestiNotify?",
+      content: "This is the procedure for selecting the destination vehicle or providing notification at the time of the vehicle station. No need to use different transportation methods, when approaching the destination, you will be notified when you arrive at the city. Time to get off the train!"
+    },
+    ja: {
+      title: "DestiNotify（ちゃくちゃく）とは？",
+      content: "ユーザーが選択した目的地の駅や停留所に近づいた時にリアルタイムで通知を提供するアプリです。 どのような交通手段を使用していても、目的地に近づくと通知が発生します。 電車、バスでの乗り過ごし防止、手軽にナビゲート！"
+    },
+    zh: {
+      title: "什么是 DestiNotify - 着着？",
+      content: "这是一款当用户接近选定的目的地车站或地点时提供实时通知的应用程序。 无论您使用哪种交通方式，当您接近目的地时，您都会收到通知。 避免错过下车的时机！"
+    }
+  };
+  
+  const currentDescription = descriptions[currentLocale] || descriptions.en;
+  
+  return (
+    <div className="my-8">
+      <h2>{currentDescription.title}</h2>
+      <p>{currentDescription.content}</p>
+    </div>
+  );
+}
+
+<AppDescription />
