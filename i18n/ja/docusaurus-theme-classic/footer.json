@@ -27,6 +27,10 @@
     "message": "App Store",
     "description": "The label of footer link with label=App Store"
   },
+  "link.item.href.App Store": {
+    "message": "https://apps.apple.com/jp/developer/yingdong-liu/id1706285656",
+    "description": "The href of footer link with label=App Store"
+  },
   "link.item.label.Home": {
     "message": "ホーム",
     "description": "The label of footer link with label=Home"

@@ -125,7 +125,7 @@ const config = {
               },
               { 
                 label: 'App Store', 
-                href: 'https://apps.apple.com' 
+                href: 'https://apps.apple.com/us/developer/yingdong-liu/id1706285656' 
               }
             ]
           },
