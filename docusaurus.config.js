@@ -8,7 +8,7 @@
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'liu-apps',
+  title: 'ryu-apps',
   tagline: 'Templates Docusaurus with Tailwind CSS and Shadcn/ui',
   favicon: 'img/favicon.ico',
 
@@ -80,8 +80,8 @@ const config = {
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'liu-apps',
-        logo: { alt: 'liu-apps Logo', src: 'img/logo.svg' },
+        title: 'ryu-apps',
+        logo: { alt: 'ryu-apps Logo', src: 'img/logo.svg' },
         items: [
           {
             type: 'localeDropdown',
@@ -192,7 +192,7 @@ const config = {
       {
         path: 'blog',
         editLocalizedFiles: false,
-        blogTitle: 'Tiny apps, quiet revolutions.',
+        blogTitle: 'Home',
         blogDescription: 'One home for all my apps—downloads, release notes, and behind-the-scenes stories.',
         blogSidebarCount: 'ALL',
         blogSidebarTitle: 'List blog',

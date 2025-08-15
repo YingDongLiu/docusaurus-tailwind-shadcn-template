@@ -18,7 +18,7 @@ function BlogListPageMetadata(props) {
   } = useDocusaurusContext()
   const { blogDescription, blogTitle, permalink } = metadata
   const isBlogOnlyMode = permalink === '/'
-  const title = isBlogOnlyMode ? siteTitle : blogTitle
+  const title = isBlogOnlyMode ? blogTitle : blogTitle
 
   return (
     <>
