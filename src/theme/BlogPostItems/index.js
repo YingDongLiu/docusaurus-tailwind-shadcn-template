@@ -65,7 +65,7 @@ export default function BlogPostItems({ items, component: BlogPostItemComponent 
                 <div className='flex items-center gap-2'>
                   {blog.content.metadata.authors.map((author, index) => (
                     <Link
-                      href={author.page.permalink}
+                      href={author.url || author.page?.permalink || '/about'}
                       title={author.name}
                       key={index}
                       className='transition-opacity hover:opacity-80'
@@ -85,7 +85,12 @@ export default function BlogPostItems({ items, component: BlogPostItemComponent 
                   <div className='text-sm font-medium dark:text-gray-200'>
                     {blog.content.metadata.authors.map((author, index) => (
                       <span key={index}>
-                        {author.name}
+                        <Link
+                          href={author.url || author.page?.permalink || '/about'}
+                          className='hover:no-underline'
+                        >
+                          {author.name}
+                        </Link>
                         {index < blog.content.metadata.authors.length - 1 && ', '}
                       </span>
                     ))}

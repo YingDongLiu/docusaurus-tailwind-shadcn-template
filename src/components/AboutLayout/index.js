@@ -7,7 +7,7 @@ export default function AboutLayout({
     name: 'YingDong Liu',
     title: 'Developer', 
     imageURL: 'https://avatars.githubusercontent.com/u/143983494?v=4',
-    url: 'https://wwww.thanhnamnguyen.dev/'
+    url: '/about'
   },
   date,
   readTime,
