@@ -13,7 +13,10 @@
       "Bash(PORT=3001 yarn start --locale ja)",
       "Bash(rm:*)",
       "Bash(yarn clear)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(npm start)",
+      "Bash(pkill:*)",
+      "Bash(true)"
     ],
     "deny": [],
     "ask": []
