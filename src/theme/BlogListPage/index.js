@@ -2,6 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 import { PageMetadata, HtmlClassNameProvider, ThemeClassNames } from '@docusaurus/theme-common'
+import { translate } from '@docusaurus/Translate'
 import BlogLayout from '@theme/BlogLayout'
 import SearchMetadata from '@theme/SearchMetadata'
 import BlogPostItems from '@theme/BlogPostItems'
@@ -18,7 +19,12 @@ function BlogListPageMetadata(props) {
   } = useDocusaurusContext()
   const { blogDescription, blogTitle, permalink } = metadata
   const isBlogOnlyMode = permalink === '/'
-  const title = isBlogOnlyMode ? blogTitle : blogTitle
+  const homeTitle = translate({
+    id: 'theme.blog.home.title',
+    message: 'Home',
+    description: 'Browser title for the blog home page'
+  })
+  const title = isBlogOnlyMode ? homeTitle : blogTitle
 
   return (
     <>
