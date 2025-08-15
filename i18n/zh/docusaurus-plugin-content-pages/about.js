@@ -25,14 +25,14 @@ export default function About() {
               {/* 博客文章样式的头部 */}
               <header>
                 {/* 标题 */}
-                <h1 className="margin-bottom--md">About</h1>
+                <h1 className="margin-bottom--md">关于我</h1>
                 
                 {/* 日期和阅读时间 */}
                 <div className="margin-bottom--md">
                   <time dateTime="2024-01-15" className="text--secondary">
-                    January 15, 2024
+                    2024年1月15日
                   </time>
-                  <span className="text--secondary"> · 3 min read</span>
+                  <span className="text--secondary"> · 3 分钟阅读</span>
                 </div>
 
                 {/* 作者信息 - 完全复制DestiNotify的样式 */}
@@ -65,46 +65,46 @@ export default function About() {
 
               {/* 页面内容 */}
               <div className="markdown">
-                <p>Hello, I'm Liu Yingdong.<br />
-                I'm an independent app developer who loves turning small everyday ideas—"It would be more convenient if…"—into reality.</p>
+                <p>大家好，我是刘英东（Liu Yingdong）。<br />
+                我是一名独立开发者，喜欢把日常生活中"如果能这样就更方便了"的小想法变成现实。</p>
 
-                <h2>About Me</h2>
+                <h2>自我介绍</h2>
                 <ul>
-                  <li>Origin: China</li>
-                  <li>Currently based in: Japan</li>
-                  <li>Languages: Japanese / Chinese / English (basic)</li>
-                  <li>Profession: Software Engineer, Mobile App Developer</li>
-                  <li>Expertise: iOS (Swift, SwiftUI), Web Frontend, Backend Development</li>
+                  <li>出生地：中国</li>
+                  <li>现居地：日本</li>
+                  <li>语言：日语 / 中文 / 英语（基础）</li>
+                  <li>职业：软件工程师、移动应用开发者</li>
+                  <li>擅长领域：iOS (Swift, SwiftUI)、Web 前端、后端开发</li>
                 </ul>
 
-                <h2>Tech Stack</h2>
-                <p>Technologies I often work with:</p>
+                <h2>技术栈</h2>
+                <p>我常用的技术包括：</p>
                 <ul>
-                  <li><strong>Languages</strong>: Java, JavaScript, TypeScript, Python, Swift, Shell, Dart</li>
-                  <li><strong>Frameworks/Libraries</strong>: SpringBoot, Vue, React, Angular, Flutter, SwiftUI</li>
-                  <li><strong>Tools</strong>: Docker, Git, Jenkins, AWS, MySQL, Redis</li>
+                  <li><strong>语言</strong>: Java, JavaScript, TypeScript, Python, Swift, Shell, Dart 等</li>
+                  <li><strong>框架/库</strong>: SpringBoot, Vue, React, Angular, Flutter, SwiftUI 等</li>
+                  <li><strong>工具</strong>: Docker, Git, Jenkins, AWS, MySQL, Redis 等</li>
                 </ul>
 
-                <h2>What I Value</h2>
+                <h2>重视的原则</h2>
                 <ul>
-                  <li>Simple, easy-to-understand design</li>
-                  <li>Minimizing waste and building efficient systems</li>
-                  <li>Continuous improvement beyond just "done"</li>
+                  <li>设计简洁且易于理解</li>
+                  <li>减少浪费，追求高效运作</li>
+                  <li>不只是"做完就结束"，而是不断改进</li>
                 </ul>
 
-                <h2>Hobbies</h2>
+                <h2>兴趣爱好</h2>
                 <ul>
-                  <li>Trying new technologies and gadgets</li>
-                  <li>Spending time in nature</li>
-                  <li>Writing code and learning new programming languages</li>
-                  <li>Running and light exercise</li>
+                  <li>尝试新技术和新电子产品</li>
+                  <li>享受大自然的时光</li>
+                  <li>写代码和学习新的编程语言</li>
+                  <li>跑步和轻度运动</li>
                 </ul>
 
-                <h2>Message</h2>
-                <p>I believe that even as an individual—not part of a large company—one can deliver value to the world.<br />
-                If you're interested, feel free to reach out.</p>
+                <h2>寄语</h2>
+                <p>我相信，即使不是大公司，个人也能为世界带来价值。<br />
+                如果你对我感兴趣，欢迎随时联系我。</p>
                 
-                <p>📩 <strong>Email:</strong> dn.apps.contact@gmail.com</p>
+                <p>📩 <strong>邮箱:</strong> dn.apps.contact@gmail.com</p>
               </div>
             </article>
           </div>

@@ -25,14 +25,14 @@ export default function About() {
               {/* 博客文章样式的头部 */}
               <header>
                 {/* 标题 */}
-                <h1 className="margin-bottom--md">About</h1>
+                <h1 className="margin-bottom--md">私について</h1>
                 
                 {/* 日期和阅读时间 */}
                 <div className="margin-bottom--md">
                   <time dateTime="2024-01-15" className="text--secondary">
-                    January 15, 2024
+                    2024年1月15日
                   </time>
-                  <span className="text--secondary"> · 3 min read</span>
+                  <span className="text--secondary"> · 3分で読めます</span>
                 </div>
 
                 {/* 作者信息 - 完全复制DestiNotify的样式 */}
@@ -65,46 +65,46 @@ export default function About() {
 
               {/* 页面内容 */}
               <div className="markdown">
-                <p>Hello, I'm Liu Yingdong.<br />
-                I'm an independent app developer who loves turning small everyday ideas—"It would be more convenient if…"—into reality.</p>
+                <p>こんにちは、劉 英東（Liu Yingdong）です。<br />
+                日常の中で感じた「もっとこうだったら便利なのに」という小さな気づきを形にすることを大切にしている、独立系のアプリ開発者です。</p>
 
-                <h2>About Me</h2>
+                <h2>自己紹介</h2>
                 <ul>
-                  <li>Origin: China</li>
-                  <li>Currently based in: Japan</li>
-                  <li>Languages: Japanese / Chinese / English (basic)</li>
-                  <li>Profession: Software Engineer, Mobile App Developer</li>
-                  <li>Expertise: iOS (Swift, SwiftUI), Web Frontend, Backend Development</li>
+                  <li>出身：中国</li>
+                  <li>現在：日本在住</li>
+                  <li>言語：日本語 / 中国語 / 英語（少し）</li>
+                  <li>職業：ソフトウェアエンジニア、モバイルアプリ開発者</li>
+                  <li>得意分野：iOS (Swift, SwiftUI)、Web フロントエンド、バックエンド開発</li>
                 </ul>
 
-                <h2>Tech Stack</h2>
-                <p>Technologies I often work with:</p>
+                <h2>技術スタック</h2>
+                <p>普段は以下のような技術を使っています：</p>
                 <ul>
-                  <li><strong>Languages</strong>: Java, JavaScript, TypeScript, Python, Swift, Shell, Dart</li>
-                  <li><strong>Frameworks/Libraries</strong>: SpringBoot, Vue, React, Angular, Flutter, SwiftUI</li>
-                  <li><strong>Tools</strong>: Docker, Git, Jenkins, AWS, MySQL, Redis</li>
+                  <li><strong>言語</strong>: Java, JavaScript, TypeScript, Python, Swift, Shell, Dart など</li>
+                  <li><strong>フレームワーク/ライブラリ</strong>: SpringBoot, Vue, React, Angular, Flutter, SwiftUI など</li>
+                  <li><strong>ツール</strong>: Docker, Git, Jenkins, AWS, MySQL, Redis など</li>
                 </ul>
 
-                <h2>What I Value</h2>
+                <h2>大事にしていること</h2>
                 <ul>
-                  <li>Simple, easy-to-understand design</li>
-                  <li>Minimizing waste and building efficient systems</li>
-                  <li>Continuous improvement beyond just "done"</li>
+                  <li>シンプルで分かりやすい設計</li>
+                  <li>無駄を減らし、効率的に動く仕組み</li>
+                  <li>「作って終わり」ではなく、改善し続ける姿勢</li>
                 </ul>
 
-                <h2>Hobbies</h2>
+                <h2>趣味</h2>
                 <ul>
-                  <li>Trying new technologies and gadgets</li>
-                  <li>Spending time in nature</li>
-                  <li>Writing code and learning new programming languages</li>
-                  <li>Running and light exercise</li>
+                  <li>新しい技術やガジェットを試すこと</li>
+                  <li>自然の中で過ごす時間</li>
+                  <li>コードを書くことや新しいプログラミング言語を学ぶこと</li>
+                  <li>ランニングや軽い運動</li>
                 </ul>
 
-                <h2>Message</h2>
-                <p>I believe that even as an individual—not part of a large company—one can deliver value to the world.<br />
-                If you're interested, feel free to reach out.</p>
+                <h2>メッセージ</h2>
+                <p>大きな企業ではなく、小さな個人でも世界に価値を届けられると信じています。<br />
+                もし興味を持っていただけたら、気軽にご連絡ください。</p>
                 
-                <p>📩 <strong>Email:</strong> dn.apps.contact@gmail.com</p>
+                <p>📩 <strong>メール:</strong> dn.apps.contact@gmail.com</p>
               </div>
             </article>
           </div>
