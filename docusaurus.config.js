@@ -104,20 +104,42 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Community',
+            title: 'Support',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus'
+                label: 'Terms',
+                href: 'https://www.apple.com/legal/internet-services/itunes/us/terms.html'
               },
-              { label: 'Discord', href: 'https://discordapp.com/invite/docusaurus' },
-              { label: 'X', href: 'https://x.com/docusaurus' }
+              { 
+                label: 'Cookie Policy', 
+                href: '/cookie-policy' 
+              }
             ]
           },
           {
-            title: 'More',
+            title: 'Resources',
             items: [
-              { label: 'GitHub', href: 'https://github.com/facebook/docusaurus' }
+              { 
+                label: 'FAQ', 
+                href: '/faq' 
+              },
+              { 
+                label: 'App Store', 
+                href: 'https://apps.apple.com' 
+              }
+            ]
+          },
+          {
+            title: 'Explore',
+            items: [
+              { 
+                label: 'Home', 
+                to: '/' 
+              },
+              { 
+                label: 'About', 
+                to: '/about' 
+              }
             ]
           }
         ],
