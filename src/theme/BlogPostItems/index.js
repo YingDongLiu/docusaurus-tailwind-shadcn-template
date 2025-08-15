@@ -11,7 +11,7 @@ import { Card, CardContent } from '../../components/ui/card'
 
 export default function BlogPostItems({ items, component: BlogPostItemComponent = BlogPostItem }) {
   return (
-    <div className='grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3'>
+    <div className='grid grid-cols-1 gap-10 sm:grid-cols-2'>
       {items.map((blog) => (
         <div key={blog.content.metadata.permalink} className='flex'>
           <Card className='flex w-full flex-col border-0 bg-transparent shadow-none'>
