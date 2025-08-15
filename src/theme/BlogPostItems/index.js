@@ -47,7 +47,7 @@ export default function BlogPostItems({ items, component: BlogPostItemComponent 
               />
               {/* 前景图片 - 截图展示 */}
               {blog.content.metadata.frontMatter.app?.screenshots && (
-                <div className='absolute inset-0 flex items-center justify-center gap-2 p-3'>
+                <div className='absolute inset-0 flex items-center justify-center gap-6 p-3'>
                   {blog.content.metadata.frontMatter.app.screenshots.map((screenshot, index) => (
                     <Image
                       key={screenshot}
