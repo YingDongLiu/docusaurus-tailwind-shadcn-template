@@ -71,7 +71,7 @@ export default function AboutLayout({
                         <img 
                           src={image.src}
                           alt={image.alt}
-                          className="w-full h-[200px] object-cover"
+                          className="w-full aspect-square object-cover"
                         />
                         {image.caption && (
                           <p className="mt-2 text-sm text-center text-muted-foreground">
