@@ -1,0 +1,77 @@
+---
+title: About
+hide_table_of_contents: true
+---
+
+import AboutLayout from '@site/src/components/AboutLayout';
+
+export default function AboutMDX(props) {
+  const images = [
+    { 
+      src: 'https://picsum.photos/300/200?random=1', 
+      alt: 'Workspace', 
+      caption: '🚀 Building innovative solutions' 
+    },
+    { 
+      src: 'https://picsum.photos/300/200?random=2', 
+      alt: 'Coding', 
+      caption: '💻 Passionate about clean code' 
+    },
+    { 
+      src: 'https://picsum.photos/300/200?random=3', 
+      alt: 'Nature', 
+      caption: '🌿 Finding balance in nature' 
+    }
+  ];
+  
+  return (
+    <AboutLayout 
+      {...props} 
+      title="About" 
+      date="January 15, 2024" 
+      readTime="3 min read"
+      images={images}
+    >
+      {props.children}
+    </AboutLayout>
+  );
+}
+
+Hello, I'm Liu Yingdong.  
+I'm an independent app developer who loves turning small everyday ideas—"It would be more convenient if…"—into reality.
+
+## About Me
+
+- Origin: China
+- Currently based in: Japan
+- Languages: Japanese / Chinese / English (basic)
+- Profession: Software Engineer, Mobile App Developer
+- Expertise: iOS (Swift, SwiftUI), Web Frontend, Backend Development
+
+## Tech Stack
+
+Technologies I often work with:
+
+- **Languages**: Java, JavaScript, TypeScript, Python, Swift, Shell, Dart
+- **Frameworks/Libraries**: SpringBoot, Vue, React, Angular, Flutter, SwiftUI
+- **Tools**: Docker, Git, Jenkins, AWS, MySQL, Redis
+
+## What I Value
+
+- Simple, easy-to-understand design
+- Minimizing waste and building efficient systems
+- Continuous improvement beyond just "done"
+
+## Hobbies
+
+- Trying new technologies and gadgets
+- Spending time in nature
+- Writing code and learning new programming languages
+- Running and light exercise
+
+## Message
+
+I believe that even as an individual—not part of a large company—one can deliver value to the world.  
+If you're interested, feel free to reach out.
+
+📩 **Email:** dn.apps.contact@gmail.com

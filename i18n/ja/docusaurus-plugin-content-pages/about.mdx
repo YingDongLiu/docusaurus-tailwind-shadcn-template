@@ -1,0 +1,77 @@
+---
+title: 私について
+hide_table_of_contents: true
+---
+
+import AboutLayout from '@site/src/components/AboutLayout';
+
+export default function AboutMDX(props) {
+  const images = [
+    { 
+      src: 'https://picsum.photos/300/200?random=1', 
+      alt: 'ワークスペース', 
+      caption: '🚀 革新的なソリューションを構築' 
+    },
+    { 
+      src: 'https://picsum.photos/300/200?random=2', 
+      alt: 'コーディング', 
+      caption: '💻 美しいコードへの情熱' 
+    },
+    { 
+      src: 'https://picsum.photos/300/200?random=3', 
+      alt: '自然', 
+      caption: '🌿 自然の中でバランスを見つける' 
+    }
+  ];
+  
+  return (
+    <AboutLayout 
+      {...props} 
+      title="私について" 
+      date="2024年1月15日" 
+      readTime="3分で読めます"
+      images={images}
+    >
+      {props.children}
+    </AboutLayout>
+  );
+}
+
+こんにちは、劉 英東（Liu Yingdong）です。  
+日常の中で感じた「もっとこうだったら便利なのに」という小さな気づきを形にすることを大切にしている、独立系のアプリ開発者です。
+
+## 自己紹介
+
+- 出身：中国
+- 現在：日本在住
+- 言語：日本語 / 中国語 / 英語（少し）
+- 職業：ソフトウェアエンジニア、モバイルアプリ開発者
+- 得意分野：iOS (Swift, SwiftUI)、Web フロントエンド、バックエンド開発
+
+## 技術スタック
+
+普段は以下のような技術を使っています：
+
+- **言語**: Java, JavaScript, TypeScript, Python, Swift, Shell, Dart など
+- **フレームワーク/ライブラリ**: SpringBoot, Vue, React, Angular, Flutter, SwiftUI など
+- **ツール**: Docker, Git, Jenkins, AWS, MySQL, Redis など
+
+## 大事にしていること
+
+- シンプルで分かりやすい設計
+- 無駄を減らし、効率的に動く仕組み
+- 「作って終わり」ではなく、改善し続ける姿勢
+
+## 趣味
+
+- 新しい技術やガジェットを試すこと
+- 自然の中で過ごす時間
+- コードを書くことや新しいプログラミング言語を学ぶこと
+- ランニングや軽い運動
+
+## メッセージ
+
+大きな企業ではなく、小さな個人でも世界に価値を届けられると信じています。  
+もし興味を持っていただけたら、気軽にご連絡ください。
+
+📩 **メール:** dn.apps.contact@gmail.com

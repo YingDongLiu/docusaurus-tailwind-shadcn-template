@@ -1,0 +1,77 @@
+---
+title: 关于我
+hide_table_of_contents: true
+---
+
+import AboutLayout from '@site/src/components/AboutLayout';
+
+export default function AboutMDX(props) {
+  const images = [
+    { 
+      src: 'https://picsum.photos/300/200?random=1', 
+      alt: '工作空间', 
+      caption: '🚀 构建创新解决方案' 
+    },
+    { 
+      src: 'https://picsum.photos/300/200?random=2', 
+      alt: '编程', 
+      caption: '💻 热衷于优雅代码' 
+    },
+    { 
+      src: 'https://picsum.photos/300/200?random=3', 
+      alt: '自然', 
+      caption: '🌿 在自然中寻找平衡' 
+    }
+  ];
+  
+  return (
+    <AboutLayout 
+      {...props} 
+      title="关于我" 
+      date="2024年1月15日" 
+      readTime="3 分钟阅读"
+      images={images}
+    >
+      {props.children}
+    </AboutLayout>
+  );
+}
+
+大家好，我是刘英东（Liu Yingdong）。  
+我是一名独立开发者，喜欢把日常生活中"如果能这样就更方便了"的小想法变成现实。
+
+## 自我介绍
+
+- 出生地：中国
+- 现居地：日本
+- 语言：日语 / 中文 / 英语（基础）
+- 职业：软件工程师、移动应用开发者
+- 擅长领域：iOS (Swift, SwiftUI)、Web 前端、后端开发
+
+## 技术栈
+
+我常用的技术包括：
+
+- **语言**: Java, JavaScript, TypeScript, Python, Swift, Shell, Dart 等
+- **框架/库**: SpringBoot, Vue, React, Angular, Flutter, SwiftUI 等
+- **工具**: Docker, Git, Jenkins, AWS, MySQL, Redis 等
+
+## 重视的原则
+
+- 设计简洁且易于理解
+- 减少浪费，追求高效运作
+- 不只是"做完就结束"，而是不断改进
+
+## 兴趣爱好
+
+- 尝试新技术和新电子产品
+- 享受大自然的时光
+- 写代码和学习新的编程语言
+- 跑步和轻度运动
+
+## 寄语
+
+我相信，即使不是大公司，个人也能为世界带来价值。  
+如果你对我感兴趣，欢迎随时联系我。
+
+📩 **邮箱:** dn.apps.contact@gmail.com
