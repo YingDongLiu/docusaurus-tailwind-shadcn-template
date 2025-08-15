@@ -84,8 +84,10 @@ const config = {
         logo: { alt: 'ryu-apps Logo', src: 'img/logo.svg' },
         items: [
           {
-            type: 'localeDropdown',
-            position: 'right',
+            'to': '/',
+            'position': 'right',
+            'label': 'Home',
+            'exact': true
           },
           {
             'to': '/about',
@@ -93,9 +95,8 @@ const config = {
             'label': 'About'
           },
           {
-            'to': '/privacy-policy',
-            'position': 'right',
-            'label': 'Privacy Policy'
+            type: 'localeDropdown',
+            position: 'right',
           }
         ]
       },
