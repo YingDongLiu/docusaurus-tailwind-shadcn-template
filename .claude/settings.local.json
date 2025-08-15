@@ -12,7 +12,8 @@
       "Bash(mkdir:*)",
       "Bash(PORT=3001 yarn start --locale ja)",
       "Bash(rm:*)",
-      "Bash(yarn clear)"
+      "Bash(yarn clear)",
+      "Bash(mv:*)"
     ],
     "deny": [],
     "ask": []

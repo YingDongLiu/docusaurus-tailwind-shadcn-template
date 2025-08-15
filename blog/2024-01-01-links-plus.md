@@ -1,5 +1,5 @@
 ---
-slug: first-blog-post
+slug: links-plus
 title: Links+
 description: Links+ helps you organize all your meeting and web links in one place.
 image: https://developer.apple.com/design/images/sol/hero-glass-s_2x.jpg
