@@ -15,16 +15,20 @@ export default function BlogPostItemFooter(): ReactNode {
     hasTruncateMarker,
     lastUpdatedBy,
     lastUpdatedAt,
+    frontMatter,
   } = metadata;
 
   // A post is truncated if it's in the "list view" and it has a truncate marker
   const truncatedPost = !isBlogPostPage && hasTruncateMarker;
 
   const tagsExists = tags.length > 0;
+  
+  // Check if footer elements should be hidden
+  const hideFooter = (frontMatter as any)?.hide_footer;
 
   const renderFooter = tagsExists || truncatedPost || editUrl;
 
-  if (!renderFooter) {
+  if (!renderFooter || hideFooter) {
     return null;
   }
 
@@ -34,7 +38,7 @@ export default function BlogPostItemFooter(): ReactNode {
 
     return (
       <footer className="docusaurus-mt-lg">
-        {tagsExists && (
+        {tagsExists && !hideFooter && (
           <div
             className={clsx(
               'row',
@@ -46,7 +50,7 @@ export default function BlogPostItemFooter(): ReactNode {
             </div>
           </div>
         )}
-        {canDisplayEditMetaRow && (
+        {canDisplayEditMetaRow && !hideFooter && (
           <EditMetaRow
             className={clsx(
               'margin-top--sm',
