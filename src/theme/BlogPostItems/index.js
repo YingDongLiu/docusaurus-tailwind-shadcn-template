@@ -2,6 +2,8 @@ import React from 'react'
 import Link from '@docusaurus/Link'
 import Image from '@theme/IdealImage'
 import useBaseUrl from '@docusaurus/useBaseUrl'
+import { useColorMode } from '@docusaurus/theme-common'
+import { useLocation } from '@docusaurus/router'
 
 import BlogPostItem from '@theme/BlogPostItem'
 
@@ -10,6 +12,23 @@ import { Avatar } from '../../components/ui/avatar'
 import { Card, CardContent } from '../../components/ui/card'
 
 export default function BlogPostItems({ items, component: BlogPostItemComponent = BlogPostItem }) {
+  const { colorMode } = useColorMode()
+  const location = useLocation()
+  
+  // 获取当前语言
+  const getCurrentLanguage = () => {
+    if (location.pathname.startsWith('/zh/')) return 'cn'
+    if (location.pathname.startsWith('/ja/')) return 'jp'
+    return 'en'
+  }
+  
+  // 获取下载按钮图片
+  const getDownloadButton = () => {
+    const lang = getCurrentLanguage()
+    const theme = colorMode === 'dark' ? 'white' : 'black'
+    return `/img/download_button/ios/${lang}-${theme}.svg`
+  }
+  
   return (
     <div className='grid grid-cols-1 gap-10 sm:grid-cols-2'>
       {items.map((blog) => (
@@ -61,43 +80,54 @@ export default function BlogPostItems({ items, component: BlogPostItemComponent 
               <p className='mb-4 mt-2 line-clamp-2 dark:text-gray-400'>
                 {blog.content.metadata.description}
               </p>
-              <div className='my-2 flex items-center gap-3'>
-                <div className='flex items-center gap-2'>
-                  {blog.content.metadata.authors.map((author, index) => (
-                    <Link
-                      href={author.url || author.page?.permalink || '/about'}
-                      title={author.name}
-                      key={index}
-                      className='transition-opacity hover:opacity-80'
-                    >
-                      <Avatar>
-                        <Image
-                          alt={author.name}
-                          img={useBaseUrl(author.imageURL)}
-                          className='aspect-square h-full w-full'
-                        />
-                      </Avatar>
-                    </Link>
-                  ))}
-                </div>
-
-                <div className='flex flex-col'>
-                  <div className='text-sm font-medium dark:text-gray-200'>
+              <div className='my-2 flex items-center justify-between'>
+                <div className='flex items-center gap-3'>
+                  <div className='flex items-center gap-2'>
                     {blog.content.metadata.authors.map((author, index) => (
-                      <span key={index}>
-                        <Link
-                          href={author.url || author.page?.permalink || '/about'}
-                          className='hover:no-underline'
-                        >
-                          {author.name}
-                        </Link>
-                        {index < blog.content.metadata.authors.length - 1 && ', '}
-                      </span>
+                      <Link
+                        href={author.url || author.page?.permalink || '/about'}
+                        title={author.name}
+                        key={index}
+                        className='transition-opacity hover:opacity-80'
+                      >
+                        <Avatar>
+                          <Image
+                            alt={author.name}
+                            img={useBaseUrl(author.imageURL)}
+                            className='aspect-square h-full w-full'
+                          />
+                        </Avatar>
+                      </Link>
                     ))}
                   </div>
-                  <div className='text-sm dark:text-gray-400'>
-                    <span>2025-06-03</span>
+
+                  <div className='flex flex-col'>
+                    <div className='text-sm font-medium dark:text-gray-200'>
+                      {blog.content.metadata.authors.map((author, index) => (
+                        <span key={index}>
+                          <Link
+                            href={author.url || author.page?.permalink || '/about'}
+                            className='hover:no-underline'
+                          >
+                            {author.name}
+                          </Link>
+                          {index < blog.content.metadata.authors.length - 1 && ', '}
+                        </span>
+                      ))}
+                    </div>
+                    <div className='text-sm dark:text-gray-400'>
+                      <span>Developer</span>
+                    </div>
                   </div>
+                </div>
+
+                {/* App Store Download Badge */}
+                <div className='flex-shrink-0 flex items-center'>
+                  <img
+                    src={useBaseUrl(getDownloadButton())}
+                    alt='Download on the App Store'
+                    className='h-8 w-auto transition-opacity hover:opacity-80 cursor-pointer'
+                  />
                 </div>
               </div>
             </CardContent>
