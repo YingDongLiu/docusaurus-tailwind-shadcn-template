@@ -17,3 +17,13 @@ facebook:
   label: 'Facebook'
   permalink: '/facebook'
   description: 'Articles on the topic facebook'
+
+about:
+  label: 'About'
+  permalink: '/about-tag'
+  description: 'Articles about our company and applications'
+
+developer:
+  label: 'Developer'
+  permalink: '/developer'
+  description: 'Articles about development and technical topics'
