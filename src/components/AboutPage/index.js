@@ -2,7 +2,6 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Head from '@docusaurus/Head';
 import clsx from 'clsx';
-import styles from './styles.module.css';
 
 export default function AboutPage({ content, locale = 'en' }) {
   const author = {
@@ -119,15 +118,21 @@ export default function AboutPage({ content, locale = 'en' }) {
               {/* Right side images */}
               <div className="col col--4">
                 <div className="margin-top--xl">
-                  <div className={styles.imageContainer}>
+                  <div className="flex flex-col gap-8">
                     {content.images.map((image, index) => (
-                      <div key={index} className={styles.imageItem}>
+                      <div key={index} className="w-full">
                         <img 
                           src={`https://picsum.photos/300/200?random=${index + 1}`}
                           alt={image.alt}
-                          className={clsx('shadow--md', styles.image)}
+                          className={clsx(
+                            'w-full h-[200px] object-cover rounded-lg transition-all',
+                            'shadow-md dark:shadow-xl dark:border dark:border-white/10'
+                          )}
                         />
-                        <p className={clsx('text--secondary text--center', styles.imageCaption)}>
+                        <p className={clsx(
+                          'mt-2 text-sm text-center',
+                          'text-muted-foreground'
+                        )}>
                           {image.caption}
                         </p>
                       </div>
