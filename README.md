@@ -153,6 +153,48 @@ import Translate from '@docusaurus/Translate';
 }
 ```
 
+### 博客文章自定义标语
+
+博客文章支持自定义标语功能，可以替换默认的日期和阅读时间显示。这对于产品介绍类文章特别有用。
+
+**使用方法：**
+
+在博客文章的 frontmatter 中添加 `custom_tagline` 字段：
+
+```yaml
+---
+title: DestiNotify
+slug: destinotify
+custom_tagline:
+  en: "Alert before your stop, travel without a flop."
+  zh: "到站前有约，心安路无忧！"
+  ja: "到着前に通知、安心して旅を。"
+---
+```
+
+**特性：**
+- 支持多语言，自动根据当前语言环境显示对应标语
+- 如果没有设置 `custom_tagline`，则显示默认的日期和阅读时间
+- 新增语言时，只需在 frontmatter 中添加对应的语言键值对即可
+
+**添加新语言支持：**
+
+例如添加韩语支持：
+1. 在 `docusaurus.config.js` 中添加语言配置：
+   ```js
+   i18n: {
+     locales: ['en', 'zh', 'ja', 'ko'], // 添加 ko
+   }
+   ```
+2. 在 frontmatter 中添加韩语标语：
+   ```yaml
+   custom_tagline:
+     en: "Alert before your stop, travel without a flop."
+     zh: "到站前有约，心安路无忧！"
+     ja: "到着前に通知、安心して旅を。"
+     ko: "정류장 전 알림, 안심하고 여행하세요."
+   ```
+
 ### OpenAPI 文档生成
 
 项目集成了 `docusaurus-plugin-openapi-docs` 插件，可以从 OpenAPI 规范生成 API 文档。
