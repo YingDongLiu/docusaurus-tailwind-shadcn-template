@@ -116,10 +116,7 @@ export default function AboutPage({ content, locale = 'en' }) {
                         <img 
                           src={`https://picsum.photos/300/200?random=${index + 1}`}
                           alt={image.alt}
-                          className={clsx(
-                            'w-full h-[200px] object-cover rounded-lg transition-all',
-                            'shadow-md dark:shadow-xl dark:border dark:border-white/10'
-                          )}
+                          className="w-full h-[200px] object-cover rounded-lg"
                         />
                         <p className={clsx(
                           'mt-2 text-sm text-center',
