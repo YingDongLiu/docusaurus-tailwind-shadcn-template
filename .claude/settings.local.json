@@ -17,7 +17,8 @@
       "Bash(npm start)",
       "Bash(pkill:*)",
       "Bash(true)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(npx update-browserslist-db:*)"
     ],
     "deny": [],
     "ask": []
