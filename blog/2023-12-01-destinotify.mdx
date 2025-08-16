@@ -16,7 +16,7 @@ custom_tagline:
   en: "Alert before your stop, travel without a flop."
   zh: "到站前有约，心安路无忧！"
   ja: "到着前に通知、安心して旅を。"
-hide_author: true
+hide_author: false
 hide_footer: true
 app_icon: /img/app_icons/desti-notify.png
 ---
@@ -24,6 +24,7 @@ app_icon: /img/app_icons/desti-notify.png
 import React from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import { PolicyLinks } from '@site/src/components/PolicyLinks';
+import { AuthorInfo } from '@site/src/components/AuthorInfo';
 
 export function Screenshots() {
   const {i18n} = useDocusaurusContext();
@@ -103,3 +104,5 @@ export function AppDescription() {
 <AppDescription />
 
 <PolicyLinks className="my-8" />
+
+<AuthorInfo className="my-8" />
