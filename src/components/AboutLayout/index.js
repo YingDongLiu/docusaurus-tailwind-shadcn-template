@@ -4,7 +4,7 @@ export default function AboutLayout({
   children, 
   title = 'About',
   author = {
-    name: 'YingDong Liu',
+    name: 'Ryu Eito',
     title: 'Developer', 
     imageURL: 'https://avatars.githubusercontent.com/u/143983494?v=4',
     url: '/about'
@@ -37,14 +37,14 @@ export default function AboutLayout({
 
                     {/* Author info */}
                     <div className="flex items-center gap-3 mt-4 mb-6">
-                      <a href={author.url} className="block">
+                      <a href={author.url} className="flex items-center">
                         <img
                           className="w-12 h-12 rounded-full object-cover"
                           src={author.imageURL}
                           alt={author.name}
                         />
                       </a>
-                      <div className="flex flex-col">
+                      <div className="flex flex-col justify-center">
                         <a href={author.url} className="text-lg font-bold hover:no-underline">
                           {author.name}
                         </a>

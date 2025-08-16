@@ -3,7 +3,7 @@ slug: links-plus
 title: Links+
 description: Links+ helps you organize all your meeting and web links in one convenient place, so you can find what you need instantly. Whether it's a video conference, an online document, or a favorite website, Links+ keeps everything neatly organized and always within reach.
 image: https://developer.apple.com/design/images/sol/hero-glass-s_2x.jpg
-authors: [yingdongliu]
+authors: [ryueito]
 tags: [hola, docusaurus]
 app:
   screenshots: 

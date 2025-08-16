@@ -30,7 +30,7 @@ export function AuthorInfo({ className = '' }: AuthorInfoProps) {
     <div className={`flex items-center gap-3 ${className}`}>
       <img 
         src="https://avatars.githubusercontent.com/u/143983494?v=4"
-        alt="YingDong Liu"
+        alt="Ryu Eito"
         className="w-10 h-10 rounded-full"
       />
       <div className="flex flex-col">
@@ -39,9 +39,9 @@ export function AuthorInfo({ className = '' }: AuthorInfoProps) {
         </span>
         <a 
           href="/about"
-          className="font-medium text-[var(--ifm-link-color)] hover:text-[var(--ifm-link-hover-color)] no-underline hover:underline"
+          className="font-medium text-[var(--ifm-link-color)] hover:text-[var(--ifm-link-hover-color)] no-underline hover:no-underline"
         >
-          YingDong Liu
+          Ryu Eito
         </a>
       </div>
     </div>
