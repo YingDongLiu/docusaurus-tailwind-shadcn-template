@@ -4,6 +4,7 @@ export const EXTERNAL_LINKS = {
 } as const;
 
 export const INTERNAL_LINKS = {
-  PRIVACY_POLICY: '/destinotify/privacy-policy',
+  DESTINOTIFY_PRIVACY_POLICY: '/destinotify/privacy-policy',
+  LINKS_PLUS_PRIVACY_POLICY: '/links-plus/privacy-policy',
   // Add more internal links here as needed
 } as const;

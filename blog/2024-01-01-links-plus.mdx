@@ -1,0 +1,108 @@
+---
+slug: links-plus
+title: Links+
+description: Links+ helps you organize all your meeting and web links in one convenient place, so you can find what you need instantly. Whether it's a video conference, an online document, or a favorite website, Links+ keeps everything neatly organized and always within reach.
+image: https://developer.apple.com/design/images/sol/hero-glass-s_2x.jpg
+authors: [ryueito]
+tags: [docusaurus]
+app:
+  screenshots: 
+    - /img/links/ios/screenshot-1.png
+    - /img/links/ios/screenshot-2.png
+    - /img/links/ios/screenshot-3.png
+  appStoreIcon: /img/apple-appstore.png
+  appStoreUrl: https://apps.apple.com/app/links-plus/id6479207869
+custom_tagline:
+  en: "Make your busy days smoother. Manage your links and time in one simple app."
+  zh: "让你的每一天更高效，Links+ 帮你同时管理链接与时间。"
+  ja: "忙しい毎日をもっとスムーズに。Links+ でリンクと時間を一元管理しましょう。"
+hide_author: true
+hide_footer: true
+app_icon: /img/app_icons/links.png
+---
+
+import React from 'react';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import { PolicyLinks } from '@site/src/components/PolicyLinks';
+import { AuthorInfo } from '@site/src/components/AuthorInfo';
+
+export function Screenshots() {
+  const {i18n} = useDocusaurusContext();
+  const currentLocale = i18n.currentLocale;
+  
+  const screenshots = {
+    en: [
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/f5/11/63/f51163d4-e1ce-4dd1-85b0-4e420c6fef71/01.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/45/8f/e7/458fe736-f467-23ed-21dd-9fdb34d3c3e4/02.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/55/30/2e/55302eed-4ef7-9ac9-df0a-3738b356b7ce/03.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/ee/77/72/ee777259-34ed-ed4b-a3eb-e65094807f11/04.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/d3/17/1c/d3171c47-7e73-8ad6-ec4a-84fd7d5d3366/05.png/0x0ss.png'
+    ],
+    zh: [
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/c6/d6/14/c6d614c1-7286-7f5e-a5f9-eb93b287382f/01.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/5b/dc/86/5bdc8631-bef0-2b03-5617-806467f88bbf/02.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/c9/e5/24/c9e52453-a4ea-833d-3213-17b1eda86f8d/03.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/03/0a/19/030a19b4-e102-1731-8eee-fa2d80e03361/04.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/a2/1c/e6/a21ce66c-782d-c0ed-4d15-c6fd747b3a61/05.png/0x0ss.png'
+    ],
+    ja: [
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/76/71/45/7671455e-17c4-9c04-8dee-39c3fcab06e9/01.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/dc/2a/14/dc2a14cf-a5c2-cf4e-a83f-02f85c245e6d/02.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e2/8b/9a/e28b9a31-dd3d-3078-5743-f7df14af555e/03.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/b7/ad/3a/b7ad3a34-9762-808f-cf83-35426783e22d/04.png/0x0ss.png',
+      'https://is2-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/f8/0b/96/f80b96d4-d1e5-e5aa-b5f4-bdb802267db4/05.png/0x0ss.png'
+    ]
+  };
+  
+  const currentScreenshots = screenshots[currentLocale] || screenshots.en;
+  
+  return (
+    <div className="grid grid-cols-5 gap-4 my-8">
+      {currentScreenshots.map((screenshot, index) => (
+        <img 
+          key={index}
+          src={screenshot} 
+          alt={`Links+ Screenshot ${index + 1}`}
+          className="rounded-2xl"
+        />
+      ))}
+    </div>
+  );
+}
+
+<Screenshots />
+
+export function AppDescription() {
+  const {i18n} = useDocusaurusContext();
+  const currentLocale = i18n.currentLocale;
+  
+  const descriptions = {
+    en: {
+      title: "What is Links+?",
+      content: "Links+ helps you organize all your meeting and web links in one convenient place, so you can find what you need instantly. Whether it's a video conference, an online document, or a favorite website, Links+ keeps everything neatly organized and always within reach."
+    },
+    ja: {
+      title: "リンクス+ とは？",
+      content: "リンクス+ は、会議リンクやお気に入りのWebリンクを一元管理できる便利なアプリです。ビデオ会議、オンライン資料、よく使うサイトなど、必要なリンクをすぐに見つけてアクセスでき、日々の業務や生活をもっとスムーズにします。"
+    },
+    zh: {
+      title: "什么是 Links+？",
+      content: "Links+ 让你在一个地方统一管理所有会议与网页链接，无论是视频会议、在线文档，还是常用网站，都能快速查找、即时访问，让你高效工作，轻松生活，不再错过任何重要时刻。"
+    }
+  };
+  
+  const currentDescription = descriptions[currentLocale] || descriptions.en;
+  
+  return (
+    <div className="my-8">
+      <h2>{currentDescription.title}</h2>
+      <p>{currentDescription.content}</p>
+    </div>
+  );
+}
+
+<AppDescription />
+
+<PolicyLinks className="my-8" app="links-plus" />
+
+<AuthorInfo className="my-8" />

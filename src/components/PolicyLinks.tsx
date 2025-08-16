@@ -6,12 +6,14 @@ interface PolicyLinksProps {
   showPrivacyPolicy?: boolean;
   showTermsOfService?: boolean;
   className?: string;
+  app?: 'destinotify' | 'links-plus';
 }
 
 export function PolicyLinks({ 
   showPrivacyPolicy = true, 
   showTermsOfService = true,
-  className = ''
+  className = '',
+  app = 'destinotify'
 }: PolicyLinksProps) {
   const {i18n} = useDocusaurusContext();
   const currentLocale = i18n.currentLocale;
@@ -33,11 +35,15 @@ export function PolicyLinks({
   
   const currentLabels = labels[currentLocale] || labels.en;
   
+  const privacyPolicyLink = app === 'links-plus' 
+    ? INTERNAL_LINKS.LINKS_PLUS_PRIVACY_POLICY 
+    : INTERNAL_LINKS.DESTINOTIFY_PRIVACY_POLICY;
+  
   return (
     <div className={`flex gap-4 ${className}`}>
       {showPrivacyPolicy && (
         <a 
-          href={INTERNAL_LINKS.PRIVACY_POLICY}
+          href={privacyPolicyLink}
           className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
         >
           {currentLabels.privacyPolicy}
